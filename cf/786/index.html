@@ -18,12 +18,12 @@
   <meta name="author" content="Patricky">
   <meta name="keywords" content="Algorithm, code, c++, cpp, cxx, programming, contest, ICPC, ACM">
   
-    <meta name="description" content="https:&#x2F;&#x2F;codeforces.com&#x2F;contest&#x2F;1674  A. Number Transformation  题意 给定 x,yx, yx,y。试给出 (a,b)(a, b)(a,b) 表示通过对 xxx 乘以 bab ^ aba 将 xxx 转变为 yyy，或回答不可能。  解答 x≤y∧x∣yx \le y \land x \mid yx≤y∧x∣y 时有解，(1,yx)(1,">
+    <meta name="description" content="https:&#x2F;&#x2F;codeforces.com&#x2F;contest&#x2F;1674 A. Number Transformation 题意 给定 \(x, y\)。试给出 \((a, b)\) 表示通过对 \(x\) 乘以 \(b ^ a\) 将 \(x\) 转变为 \(y\)，或回答不可能。 解答 \(x \le y \land x \mid y\) 时有解，\((1, \dfrac{y}{x})\) 是可">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cf786">
 <meta property="og:url" content="https://algo.teko7a.top/cf/786/index.html">
 <meta property="og:site_name" content="Patricky | Algo">
-<meta property="og:description" content="https:&#x2F;&#x2F;codeforces.com&#x2F;contest&#x2F;1674  A. Number Transformation  题意 给定 x,yx, yx,y。试给出 (a,b)(a, b)(a,b) 表示通过对 xxx 乘以 bab ^ aba 将 xxx 转变为 yyy，或回答不可能。  解答 x≤y∧x∣yx \le y \land x \mid yx≤y∧x∣y 时有解，(1,yx)(1,">
+<meta property="og:description" content="https:&#x2F;&#x2F;codeforces.com&#x2F;contest&#x2F;1674 A. Number Transformation 题意 给定 \(x, y\)。试给出 \((a, b)\) 表示通过对 \(x\) 乘以 \(b ^ a\) 将 \(x\) 转变为 \(y\)，或回答不可能。 解答 \(x \le y \land x \mid y\) 时有解，\((1, \dfrac{y}{x})\) 是可">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://algo.teko7a.top/images/cf/cf786d.png">
 <meta property="article:published_time" content="2022-05-02T22:12:38.000Z">
@@ -219,7 +219,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      7k words(or CN characters)
+      6.6k words(or CN characters)
     </span>
   
 
@@ -260,13 +260,23 @@
             <h1 style="display: none">cf786</h1>
             
             <div class="markdown-body">
-              <p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1674">https://codeforces.com/contest/1674</a></p>
-<h1 id="a-number-transformation"><a class="markdownIt-Anchor" href="#a-number-transformation"></a> A. Number Transformation</h1>
-<h2 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h2>
-<p>给定 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo separator="true">,</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x, y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span>。试给出 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(a, b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">b</span><span class="mclose">)</span></span></span></span> 表示通过对 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 乘以 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>b</mi><mi>a</mi></msup></mrow><annotation encoding="application/x-tex">b ^ a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">a</span></span></span></span></span></span></span></span></span></span></span> 将 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 转变为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span>，或回答不可能。</p>
-<h2 id="解答"><a class="markdownIt-Anchor" href="#解答"></a> 解答</h2>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo>≤</mo><mi>y</mi><mo>∧</mo><mi>x</mi><mo>∣</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x \le y \land x \mid y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span> 时有解，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo separator="true">,</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mi>y</mi><mi>x</mi></mfrac></mstyle><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(1, \dfrac{y}{x})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.7935599999999998em;vertical-align:-0.686em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1075599999999999em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">x</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span></span></span> 是可满足的一组解。</p>
-<details><summary>展开代码</summary>
+              <p><a
+target="_blank" rel="noopener" href="https://codeforces.com/contest/1674">https://codeforces.com/contest/1674</a></p>
+<h1 id="a.-number-transformation">A. Number Transformation</h1>
+<h2 id="题意">题意</h2>
+<p>给定 <span class="math inline">\(x, y\)</span>。试给出 <span
+class="math inline">\((a, b)\)</span> 表示通过对 <span
+class="math inline">\(x\)</span> 乘以 <span class="math inline">\(b ^
+a\)</span> 将 <span class="math inline">\(x\)</span> 转变为 <span
+class="math inline">\(y\)</span>，或回答不可能。</p>
+<h2 id="解答">解答</h2>
+<p><span class="math inline">\(x \le y \land x \mid y\)</span>
+时有解，<span class="math inline">\((1, \dfrac{y}{x})\)</span>
+是可满足的一组解。</p>
+<details>
+<summary>
+展开代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
   <span class="hljs-type">int</span> a, b;
   std::cin &gt;&gt; a &gt;&gt; b;
@@ -279,14 +289,19 @@
 &#125;</code></pre></div>
 </details>
 <blockquote>
-<p>复杂度： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></p>
+<p>复杂度： <span class="math inline">\(\mathcal O(1)\)</span></p>
 </blockquote>
-<h1 id="b-dictionary"><a class="markdownIt-Anchor" href="#b-dictionary"></a> B. Dictionary</h1>
-<h2 id="题意-2"><a class="markdownIt-Anchor" href="#题意-2"></a> 题意</h2>
-<p>两个不同字母组成的集合中，给定的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">s</span></span></span></span> 居于第几？</p>
-<h2 id="解答-2"><a class="markdownIt-Anchor" href="#解答-2"></a> 解答</h2>
-<p>注意到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><msup><mn>6</mn><mn>2</mn></msup><mo>−</mo><mn>26</mn><mo>=</mo><mn>650</mn></mrow><annotation encoding="application/x-tex">26 ^ 2 - 26 = 650</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mord"><span class="mord">6</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">6</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span><span class="mord">5</span><span class="mord">0</span></span></span></span>，非常小。预处理出来这个集合也是可以接受的。</p>
-<details><summary>展开代码</summary>
+<h1 id="b.-dictionary">B. Dictionary</h1>
+<h2 id="题意-1">题意</h2>
+<p>两个不同字母组成的集合中，给定的 <span
+class="math inline">\(s\)</span> 居于第几？</p>
+<h2 id="解答-1">解答</h2>
+<p>注意到 <span class="math inline">\(26 ^ 2 - 26 =
+650\)</span>，非常小。预处理出来这个集合也是可以接受的。</p>
+<details>
+<summary>
+展开代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
   <span class="hljs-type">static</span> <span class="hljs-type">bool</span> initialized = <span class="hljs-literal">false</span>;
   <span class="hljs-type">static</span> std::map&lt;std::array&lt;<span class="hljs-type">char</span>, 2&gt;, <span class="hljs-type">int</span>&gt; mp;
@@ -316,11 +331,18 @@
 &#125;</code></pre></div>
 </details>
 <blockquote>
-<p>复杂度： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi mathvariant="normal">∣</mi><mi mathvariant="normal">Σ</mi><msup><mi mathvariant="normal">∣</mi><mn>2</mn></msup><mo>+</mo><mi>T</mi><mi>log</mi><mo>⁡</mo><mi mathvariant="normal">∣</mi><mi mathvariant="normal">Σ</mi><mi mathvariant="normal">∣</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(|\Sigma| ^ 2 + T \log |\Sigma|)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">∣</span><span class="mord">Σ</span><span class="mord"><span class="mord">∣</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">∣</span><span class="mord">Σ</span><span class="mord">∣</span><span class="mclose">)</span></span></span></span></p>
+<p>复杂度： <span class="math inline">\(\mathcal O(|\Sigma| ^ 2 + T \log
+|\Sigma|)\)</span></p>
 </blockquote>
 <hr />
-<p>Bonus: 此集合实为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>26</mn></mrow><annotation encoding="application/x-tex">26</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">6</span></span></span></span> 进制「抠掉」所有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a = b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> 的点。因此可以关于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo>&lt;</mo><mtext> ⁣</mtext><mtext> ⁣</mtext><mtext> ⁣</mtext><mtext> ⁣</mtext><mo stretchy="false">?</mo><mtext>  </mtext><mtext>  </mtext><mi>b</mi></mrow><annotation encoding="application/x-tex">a &lt;\!\!\!\!?\;\; b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:-0.16666666666666666em;"></span><span class="mspace" style="margin-right:-0.16666666666666666em;"></span><span class="mspace" style="margin-right:-0.16666666666666666em;"></span><span class="mspace" style="margin-right:-0.16666666666666666em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mclose">?</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">b</span></span></span></span> 分类讨论。</p>
-<details><summary>展开代码</summary>
+<p>Bonus: 此集合实为 <span class="math inline">\(26\)</span>
+进制「抠掉」所有 <span class="math inline">\(a = b\)</span>
+的点。因此可以关于 <span class="math inline">\(a &lt;\!\!\!\!?\;\;
+b\)</span> 分类讨论。</p>
+<details>
+<summary>
+展开代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
   <span class="hljs-type">char</span> a, b;
   std::cin &gt;&gt; a &gt;&gt; b;
@@ -330,17 +352,28 @@
 &#125;</code></pre></div>
 </details>
 <blockquote>
-<p>复杂度： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></p>
+<p>复杂度： <span class="math inline">\(\mathcal O(1)\)</span></p>
 </blockquote>
-<h1 id="c-infinite-replacement"><a class="markdownIt-Anchor" href="#c-infinite-replacement"></a> C. Infinite Replacement</h1>
-<h2 id="题意-3"><a class="markdownIt-Anchor" href="#题意-3"></a> 题意</h2>
-<p>给定两个字符串 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mo separator="true">,</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">s, t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">s</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">t</span></span></span></span>，其中 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">s</span></span></span></span> <strong>全为</strong> <code>a</code>。你可以多次将某个 <code>a</code> 替换为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">t</span></span></span></span>，问有多少种可能的字符串？</p>
+<h1 id="c.-infinite-replacement">C. Infinite Replacement</h1>
+<h2 id="题意-2">题意</h2>
+<p>给定两个字符串 <span class="math inline">\(s, t\)</span>，其中 <span
+class="math inline">\(s\)</span> <strong>全为</strong>
+<code>a</code>。你可以多次将某个 <code>a</code> 替换为 <span
+class="math inline">\(t\)</span>，问有多少种可能的字符串？</p>
 <p>或回答有无穷多种。</p>
-<h2 id="解答-3"><a class="markdownIt-Anchor" href="#解答-3"></a> 解答</h2>
-<p>如果 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mo>=</mo><mi mathvariant="normal">‘</mi><mi mathvariant="normal">‘</mi><mi>a</mi><mi mathvariant="normal">&quot;</mi></mrow><annotation encoding="application/x-tex">t = ``a&quot;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">‘</span><span class="mord">‘</span><span class="mord mathdefault">a</span><span class="mord">&quot;</span></span></span></span>，那么总有最初的那一种。如果替换上去的部分依然包含 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">‘</mi><mi mathvariant="normal">‘</mi><mi>a</mi><mi mathvariant="normal">&quot;</mi></mrow><annotation encoding="application/x-tex">``a&quot;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">‘</span><span class="mord">‘</span><span class="mord mathdefault">a</span><span class="mord">&quot;</span></span></span></span>，那么有无穷多种可能。正如：</p>
+<h2 id="解答-2">解答</h2>
+<p>如果 <span class="math inline">\(t =
+``a&quot;\)</span>，那么总有最初的那一种。如果替换上去的部分依然包含
+<span
+class="math inline">\(``a&quot;\)</span>，那么有无穷多种可能。正如：</p>
 <div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&#123;&#125;&#x27;</span>.<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;&#123;&#125;&#x27;</span>).<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;&#123;&#125;&#x27;</span>).<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;&#123;&#125;&#x27;</span>).<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;&#123;&#125;&#x27;</span>))</code></pre></div>
-<p>否则（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">‘</mi><mi mathvariant="normal">‘</mi><mi>a</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">∉</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">``a&quot; \notin t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">‘</span><span class="mord">‘</span><span class="mord mathdefault">a</span><span class="mord">&quot;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mord"><span class="mrel">∈</span></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.75em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="llap"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="inner"><span class="mord"><span class="mord">/</span><span class="mspace" style="margin-right:0.05555555555555555em;"></span></span></span><span class="fix"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.25em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">t</span></span></span></span>）, 原串中的每一个位置都可以选择换或者不换，于是方案数为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">2 ^ n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.664392em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span></span></span></span>。</p>
-<details><summary>展开代码</summary>
+<p>否则（<span class="math inline">\(``a&quot; \notin t\)</span>）,
+原串中的每一个位置都可以选择换或者不换，于是方案数为 <span
+class="math inline">\(2 ^ n\)</span>。</p>
+<details>
+<summary>
+展开代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
   std::string s, t;
   std::cin &gt;&gt; s &gt;&gt; t;
@@ -357,13 +390,19 @@
 &#125;</code></pre></div>
 </details>
 <blockquote>
-<p>复杂度： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi mathvariant="normal">∣</mi><mi>t</mi><mi mathvariant="normal">∣</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(|t|)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">∣</span><span class="mord mathdefault">t</span><span class="mord">∣</span><span class="mclose">)</span></span></span></span></p>
+<p>复杂度： <span class="math inline">\(\mathcal O(|t|)\)</span></p>
 </blockquote>
-<h1 id="d-a-b-c-sort"><a class="markdownIt-Anchor" href="#d-a-b-c-sort"></a> D. A-B-C Sort</h1>
-<h2 id="题意-4"><a class="markdownIt-Anchor" href="#题意-4"></a> 题意</h2>
-<p>给定数组 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">{</mo><mi>A</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{A\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathdefault">A</span><span class="mclose">}</span></span></span></span>，以及两个空数组 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">{</mo><mi>B</mi><mo stretchy="false">}</mo><mo separator="true">,</mo><mo stretchy="false">{</mo><mi>C</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{B\}, \{C\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mclose">}</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mopen">{</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mclose">}</span></span></span></span>。执行下面的算法之后，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">{</mo><mi>C</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{C\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mclose">}</span></span></span></span> 是否能变为单调不减的序列？</p>
-<p><img src="/images/cf/cf786d.png" srcset="/img/loading.gif" lazyload alt="" /></p>
-<details><summary>这一段的 LaTeX 代码</summary>
+<h1 id="d.-a-b-c-sort">D. A-B-C Sort</h1>
+<h2 id="题意-3">题意</h2>
+<p>给定数组 <span class="math inline">\(\{A\}\)</span>，以及两个空数组
+<span class="math inline">\(\{B\},
+\{C\}\)</span>。执行下面的算法之后，<span
+class="math inline">\(\{C\}\)</span> 是否能变为单调不减的序列？</p>
+<p><img src="/images/cf/cf786d.png" srcset="/img/loading.gif" lazyload /></p>
+<details>
+<summary>
+这一段的 LaTeX 代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs latex"><span class="hljs-keyword">\def</span><span class="hljs-keyword">\SetClass</span>&#123;article&#125;
 <span class="hljs-keyword">\documentclass</span>&#123;<span class="hljs-keyword">\SetClass</span>&#125;
 <span class="hljs-keyword">\usepackage</span>[lined,boxed,commentsnumbered]&#123;algorithm2e&#125;
@@ -394,10 +433,15 @@
 <span class="hljs-keyword">\end</span>&#123;algorithm&#125;
 <span class="hljs-keyword">\end</span>&#123;document&#125;</code></pre></div>
 </details>
-<h2 id="解答-4"><a class="markdownIt-Anchor" href="#解答-4"></a> 解答</h2>
-<p>上述算法两个步骤基本互逆，这使得我们 <strong>只能调整相邻的元素</strong>。</p>
-<p>模拟即可，但需要注意到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">[</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo><mo>→</mo><mo stretchy="false">[</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[1, 2, 1] \rightarrow [1, 1, 2]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mclose">]</span></span></span></span>。</p>
-<details><summary>展开代码</summary>
+<h2 id="解答-3">解答</h2>
+<p>上述算法两个步骤基本互逆，这使得我们
+<strong>只能调整相邻的元素</strong>。</p>
+<p>模拟即可，但需要注意到 <span class="math inline">\([1, 2, 1]
+\rightarrow [1, 1, 2]\)</span>。</p>
+<details>
+<summary>
+展开代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
   <span class="hljs-type">int</span> n;
   std::cin &gt;&gt; n;
@@ -417,10 +461,13 @@
 &#125;</code></pre></div>
 </details>
 <blockquote>
-<p>复杂度： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></p>
+<p>复杂度： <span class="math inline">\(\mathcal O(n)\)</span></p>
 </blockquote>
 <p>Bonus: 赛时代码。</p>
-<details><summary>展开代码</summary>
+<details>
+<summary>
+展开代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp">std::vector&lt;<span class="hljs-type">int</span>&gt; b;
 
 <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; ++i) &#123;
@@ -432,27 +479,31 @@
 
 std::cout &lt;&lt; (std::<span class="hljs-built_in">is_sorted</span>(b.<span class="hljs-built_in">begin</span>(), b.<span class="hljs-built_in">end</span>()) ? <span class="hljs-string">&quot;YES\n&quot;</span> : <span class="hljs-string">&quot;NO\n&quot;</span>);</code></pre></div>
 </details>
-<h1 id="e-breaking-the-wall"><a class="markdownIt-Anchor" href="#e-breaking-the-wall"></a> E. Breaking the Wall</h1>
+<h1 id="e.-breaking-the-wall">E. Breaking the Wall</h1>
 <blockquote>
-<p>本题 Hacked 数高达 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>150</mn><msup><mn>0</mn><mo>+</mo></msup></mrow><annotation encoding="application/x-tex">1500^+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.771331em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">5</span><span class="mord">0</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span></span></span></span>。</p>
+<p>本题 Hacked 数高达 <span class="math inline">\(1500^+\)</span>。</p>
 </blockquote>
-<h2 id="题意-5"><a class="markdownIt-Anchor" href="#题意-5"></a> 题意</h2>
-<p>给定一个数组 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">{</mo><mi>A</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{A\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathdefault">A</span><span class="mclose">}</span></span></span></span>，你可多次选择单点 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">-2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">2</span></span></span></span>，相邻元素（如果有）将会 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">1</span></span></span></span>。</p>
-<p>问至少需要打击多少次才会出现至少两个位置 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">&lt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> ？</p>
-<h2 id="解答-5"><a class="markdownIt-Anchor" href="#解答-5"></a> 解答</h2>
+<h2 id="题意-4">题意</h2>
+<p>给定一个数组 <span
+class="math inline">\(\{A\}\)</span>，你可多次选择单点 <span
+class="math inline">\(-2\)</span>，相邻元素（如果有）将会 <span
+class="math inline">\(-1\)</span>。</p>
+<p>问至少需要打击多少次才会出现至少两个位置 <span
+class="math inline">\(&lt; 0\)</span> ？</p>
+<h2 id="解答-4">解答</h2>
 <p>枚举这俩可能的情况：</p>
 <ul>
-<li>
-<p>两者相邻：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">[</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[1, 2, 1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span> 或者 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">[</mo><mn>1</mn><mo separator="true">,</mo><mn>3</mn><mo separator="true">,</mo><mn>3</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[1, 3, 3, 1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span> 打击。</p>
-</li>
-<li>
-<p>隔着一个：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">[</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[1, 2, 1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span> 打击。<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mtext>  </mtext><mo stretchy="false">(</mo><mi>a</mi><mo>≤</mo><mi>b</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>a</mi><mo>+</mo><mrow><mo fence="true">⌈</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>b</mi><mo>−</mo><mi>a</mi></mrow><mn>2</mn></mfrac></mstyle><mo fence="true">⌉</mo></mrow></mrow><annotation encoding="application/x-tex">a, b\; (a \le b), a + \left\lceil\dfrac{b - a}{2}\right\rceil</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">b</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">⌈</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">b</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">⌉</span></span></span></span></span></span></p>
-</li>
-<li>
-<p>离得很远：选择最小的两元素多次单点打击。</p>
-</li>
+<li><p>两者相邻：<span class="math inline">\([1, 2, 1]\)</span> 或者
+<span class="math inline">\([1, 3, 3, 1]\)</span> 打击。</p></li>
+<li><p>隔着一个：<span class="math inline">\([1, 2, 1]\)</span>
+打击。<span class="math inline">\(a, b\; (a \le b), a +
+\left\lceil\dfrac{b - a}{2}\right\rceil\)</span></p></li>
+<li><p>离得很远：选择最小的两元素多次单点打击。</p></li>
 </ul>
-<details><summary>展开代码</summary>
+<details>
+<summary>
+展开代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;
   <span class="hljs-type">int</span> n;
   std::cin &gt;&gt; n;
@@ -495,18 +546,27 @@ std::cout &lt;&lt; (std::<span class="hljs-built_in">is_sorted</span>(b.<span cl
 &#125;</code></pre></div>
 </details>
 <blockquote>
-<p>复杂度： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></p>
+<p>复杂度： <span class="math inline">\(\mathcal O(n)\)</span></p>
 </blockquote>
-<h1 id="f-desktop-rearrangement"><a class="markdownIt-Anchor" href="#f-desktop-rearrangement"></a> F. Desktop Rearrangement</h1>
-<h2 id="题意-6"><a class="markdownIt-Anchor" href="#题意-6"></a> 题意</h2>
-<p>在二维矩阵上有一些 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">‘</mi><mi mathvariant="normal">‘</mi><mo>⋆</mo><mi mathvariant="normal">&quot;</mi></mrow><annotation encoding="application/x-tex">``\star&quot;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">‘</span><span class="mord">‘</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋆</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">&quot;</span></span></span></span> 与 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">‘</mi><mi mathvariant="normal">‘</mi><mo>⋅</mo><mi mathvariant="normal">&quot;</mi></mrow><annotation encoding="application/x-tex">``\cdot&quot;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">‘</span><span class="mord">‘</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">&quot;</span></span></span></span>。</p>
-<p>给出多组询问, 将 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x, y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span> 格点的符号反转，即 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">‘</mi><mi mathvariant="normal">‘</mi><mo>⋆</mo><mi mathvariant="normal">&quot;</mi><mo>↔</mo><mi mathvariant="normal">‘</mi><mi mathvariant="normal">‘</mi><mo>⋅</mo><mi mathvariant="normal">&quot;</mi></mrow><annotation encoding="application/x-tex">``\star&quot; \leftrightarrow ``\cdot&quot;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">‘</span><span class="mord">‘</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋆</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">&quot;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">↔</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">‘</span><span class="mord">‘</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">&quot;</span></span></span></span> 之后，回答将当前桌面上的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">‘</mi><mi mathvariant="normal">‘</mi><mo>⋆</mo><mi mathvariant="normal">&quot;</mi></mrow><annotation encoding="application/x-tex">``\star&quot;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">‘</span><span class="mord">‘</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋆</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">&quot;</span></span></span></span><br />
-从左到右、从上到下排布整齐至少需要移动多少个 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">‘</mi><mi mathvariant="normal">‘</mi><mo>⋆</mo><mi mathvariant="normal">&quot;</mi></mrow><annotation encoding="application/x-tex">``\star&quot;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">‘</span><span class="mord">‘</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋆</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">&quot;</span></span></span></span> ？</p>
+<h1 id="f.-desktop-rearrangement">F. Desktop Rearrangement</h1>
+<h2 id="题意-5">题意</h2>
+<p>在二维矩阵上有一些 <span class="math inline">\(``\star&quot;\)</span>
+与 <span class="math inline">\(``\cdot&quot;\)</span>。</p>
+<p>给出多组询问, 将 <span class="math inline">\((x, y)\)</span>
+格点的符号反转，即 <span class="math inline">\(``\star&quot;
+\leftrightarrow ``\cdot&quot;\)</span> 之后，回答将当前桌面上的 <span
+class="math inline">\(``\star&quot;\)</span>
+从左到右、从上到下排布整齐至少需要移动多少个 <span
+class="math inline">\(``\star&quot;\)</span> ？</p>
 <p><strong>这个修改是永久的</strong>。</p>
-<h2 id="解答-6"><a class="markdownIt-Anchor" href="#解答-6"></a> 解答</h2>
+<h2 id="解答-5">解答</h2>
 <p>最小花费就是不在前 <strong>tot</strong> 个位置的星星个数。</p>
-<p>对于每次修改，只会增加或者减少一个星星，因此每次回答都是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> 的。</p>
-<details><summary>展开代码</summary>
+<p>对于每次修改，只会增加或者减少一个星星，因此每次回答都是 <span
+class="math inline">\(\mathcal O(1)\)</span> 的。</p>
+<details>
+<summary>
+展开代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;
   std::cin.<span class="hljs-built_in">tie</span>(<span class="hljs-literal">nullptr</span>)-&gt;<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-literal">false</span>);
 
@@ -565,21 +625,34 @@ std::cout &lt;&lt; (std::<span class="hljs-built_in">is_sorted</span>(b.<span cl
 &#125;</code></pre></div>
 </details>
 <blockquote>
-<p>复杂度： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>×</mo><mi>m</mi><mo>+</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n \times m + q)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="mclose">)</span></span></span></span></p>
+<p>复杂度： <span class="math inline">\(\mathcal O(n \times m +
+q)\)</span></p>
 </blockquote>
-<h1 id="g-remove-directed-edges"><a class="markdownIt-Anchor" href="#g-remove-directed-edges"></a> G. Remove Directed Edges</h1>
-<h2 id="题意-7"><a class="markdownIt-Anchor" href="#题意-7"></a> 题意</h2>
-<p>给定一张 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">G</mi></mrow><annotation encoding="application/x-tex">\rm DAG</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mord mathrm">D</span><span class="mord mathrm">A</span><span class="mord mathrm">G</span></span></span></span></span>，删去若干边，使得每个点：</p>
+<h1 id="g.-remove-directed-edges">G. Remove Directed Edges</h1>
+<h2 id="题意-6">题意</h2>
+<p>给定一张 <span class="math inline">\(\rm
+DAG\)</span>，删去若干边，使得每个点：</p>
 <ul>
 <li>若原有出边，则至少删去一条。</li>
 <li>若原有入边，则至少删去一条。</li>
 </ul>
-<p>随后选取子图 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">{</mo><mi>S</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{S\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mclose">}</span></span></span></span>，其中的任两点之间可达（单方面到达即可）。求 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo fence="true">∣</mo><mi>S</mi><mo fence="true">∣</mo></mrow><annotation encoding="application/x-tex">\left|S\right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">∣</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mclose delimcenter" style="top:0em;">∣</span></span></span></span></span> 最大是多少。</p>
-<h2 id="解答-7"><a class="markdownIt-Anchor" href="#解答-7"></a> 解答</h2>
-<p>删哪些边？那些入、出度为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 的点必须删除, 所以入、出度同时为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 的点一定不会成为答案。</p>
-<p>剩下的点，即使不与最终的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">{</mo><mi>S</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{S\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mclose">}</span></span></span></span> 联通也无关紧要, 因为最后需要求解的子图也是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">G</mi></mrow><annotation encoding="application/x-tex">\rm DAG</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mord mathrm">D</span><span class="mord mathrm">A</span><span class="mord mathrm">G</span></span></span></span></span>，其最长链即为所求, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">dp</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">p</span></span></span></span> 会解决掉这些情况。</p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">dp</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">p</span></span></span></span> 的过程实际上就是遍历 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi><mi>A</mi><mi>G</mi></mrow><annotation encoding="application/x-tex">DAG</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mord mathdefault">A</span><span class="mord mathdefault">G</span></span></span></span>, 使用拓扑排序的 Kahn 算法即可。</p>
-<details><summary>展开代码</summary>
+<p>随后选取子图 <span
+class="math inline">\(\{S\}\)</span>，其中的任两点之间可达（单方面到达即可）。求
+<span class="math inline">\(\left|S\right|\)</span> 最大是多少。</p>
+<h2 id="解答-6">解答</h2>
+<p>删哪些边？那些入、出度为 <span class="math inline">\(1\)</span>
+的点必须删除, 所以入、出度同时为 <span class="math inline">\(1\)</span>
+的点一定不会成为答案。</p>
+<p>剩下的点，即使不与最终的 <span class="math inline">\(\{S\}\)</span>
+联通也无关紧要, 因为最后需要求解的子图也是 <span
+class="math inline">\(\rm DAG\)</span>，其最长链即为所求, <span
+class="math inline">\(dp\)</span> 会解决掉这些情况。</p>
+<p><span class="math inline">\(dp\)</span> 的过程实际上就是遍历 <span
+class="math inline">\(DAG\)</span>, 使用拓扑排序的 Kahn 算法即可。</p>
+<details>
+<summary>
+展开代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-type">static</span> <span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">200&#x27;007</span>;
 
 std::pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; e[N];
@@ -636,7 +709,7 @@ std::vector&lt;<span class="hljs-type">int</span>&gt; v[N];
 &#125;</code></pre></div>
 </details>
 <blockquote>
-<p>复杂度： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n + m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mclose">)</span></span></span></span></p>
+<p>复杂度： <span class="math inline">\(\mathcal O(n + m)\)</span></p>
 </blockquote>
 
             </div>
@@ -836,8 +909,43 @@ std::vector&lt;<span class="hljs-type">int</span>&gt; v[N];
   
 
   
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css" />
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
   
 
 

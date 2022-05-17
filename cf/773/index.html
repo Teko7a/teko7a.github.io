@@ -18,12 +18,12 @@
   <meta name="author" content="Patricky">
   <meta name="keywords" content="Algorithm, code, c++, cpp, cxx, programming, contest, ICPC, ACM">
   
-    <meta name="description" content="This is an empty post since a mistake      &lt;++&gt;">
+    <meta name="description" content="This is an empty post since a mistake  &lt;++&gt;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cf773">
 <meta property="og:url" content="https://algo.teko7a.top/cf/773/index.html">
 <meta property="og:site_name" content="Patricky | Algo">
-<meta property="og:description" content="This is an empty post since a mistake      &lt;++&gt;">
+<meta property="og:description" content="This is an empty post since a mistake  &lt;++&gt;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-05-01T17:46:14.000Z">
 <meta property="article:modified_time" content="2022-05-08T08:15:48.389Z">
@@ -257,8 +257,9 @@
             <h1 style="display: none">cf773</h1>
             
             <div class="markdown-body">
-              <p class="note note-warning"> This is an empty
-post since a mistake     </p>
+              <p class="note note-warning">
+This is an empty post since a mistake
+</p>
 <p>&lt;++&gt;</p>
 
             </div>
@@ -450,8 +451,43 @@ post since a mistake     </p>
   
 
   
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css" />
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
   
 
 

@@ -18,12 +18,12 @@
   <meta name="author" content="Patricky">
   <meta name="keywords" content="Algorithm, code, c++, cpp, cxx, programming, contest, ICPC, ACM">
   
-    <meta name="description" content="https:&#x2F;&#x2F;codeforces.com&#x2F;contest&#x2F;1675  A. Food for Animals  题意 给定 aaa 个狗粮，bbb 个猫粮，ccc 个任意。是否能够给 xxx 只狗、yyy 只猫各自分配一个？  解答 最后分配任意的。 展开代码 void solve() &amp;#123;   int a, b, c, x, y;   std::cin &gt;&gt; a &gt;">
+    <meta name="description" content="https:&#x2F;&#x2F;codeforces.com&#x2F;contest&#x2F;1675 A. Food for Animals 题意 给定 \(a\) 个狗粮，\(b\) 个猫粮，\(c\) 个任意。是否能够给 \(x\) 只狗、\(y\) 只猫各自分配一个？ 解答 最后分配任意的。   展开代码  void solve() &amp;#123;   int a, b, c, x, y;   std::cin &gt;&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cf787">
 <meta property="og:url" content="https://algo.teko7a.top/cf/787/index.html">
 <meta property="og:site_name" content="Patricky | Algo">
-<meta property="og:description" content="https:&#x2F;&#x2F;codeforces.com&#x2F;contest&#x2F;1675  A. Food for Animals  题意 给定 aaa 个狗粮，bbb 个猫粮，ccc 个任意。是否能够给 xxx 只狗、yyy 只猫各自分配一个？  解答 最后分配任意的。 展开代码 void solve() &amp;#123;   int a, b, c, x, y;   std::cin &gt;&gt; a &gt;">
+<meta property="og:description" content="https:&#x2F;&#x2F;codeforces.com&#x2F;contest&#x2F;1675 A. Food for Animals 题意 给定 \(a\) 个狗粮，\(b\) 个猫粮，\(c\) 个任意。是否能够给 \(x\) 只狗、\(y\) 只猫各自分配一个？ 解答 最后分配任意的。   展开代码  void solve() &amp;#123;   int a, b, c, x, y;   std::cin &gt;&amp;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-05-06T10:15:55.000Z">
 <meta property="article:modified_time" content="2022-05-08T08:15:48.392Z">
@@ -218,7 +218,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      5.3k words(or CN characters)
+      5.1k words(or CN characters)
     </span>
   
 
@@ -259,13 +259,21 @@
             <h1 style="display: none">cf787</h1>
             
             <div class="markdown-body">
-              <p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1675">https://codeforces.com/contest/1675</a></p>
-<h1 id="a-food-for-animals"><a class="markdownIt-Anchor" href="#a-food-for-animals"></a> A. Food for Animals</h1>
-<h2 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h2>
-<p>给定 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span> 个狗粮，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> 个猫粮，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">c</span></span></span></span> 个任意。是否能够给 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 只狗、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span> 只猫各自分配一个？</p>
-<h2 id="解答"><a class="markdownIt-Anchor" href="#解答"></a> 解答</h2>
+              <p><a
+target="_blank" rel="noopener" href="https://codeforces.com/contest/1675">https://codeforces.com/contest/1675</a></p>
+<h1 id="a.-food-for-animals">A. Food for Animals</h1>
+<h2 id="题意">题意</h2>
+<p>给定 <span class="math inline">\(a\)</span> 个狗粮，<span
+class="math inline">\(b\)</span> 个猫粮，<span
+class="math inline">\(c\)</span> 个任意。是否能够给 <span
+class="math inline">\(x\)</span> 只狗、<span
+class="math inline">\(y\)</span> 只猫各自分配一个？</p>
+<h2 id="解答">解答</h2>
 <p>最后分配任意的。</p>
-<details><summary>展开代码</summary>
+<details>
+<summary>
+展开代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
   <span class="hljs-type">int</span> a, b, c, x, y;
   std::cin &gt;&gt; a &gt;&gt; b &gt;&gt; c &gt;&gt; x &gt;&gt; y;
@@ -277,17 +285,22 @@
 &#125;</code></pre></div>
 </details>
 <blockquote>
-<p>复杂度： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></p>
+<p>复杂度： <span class="math inline">\(\mathcal O(1)\)</span></p>
 </blockquote>
-<h1 id="b-make-it-increasing"><a class="markdownIt-Anchor" href="#b-make-it-increasing"></a> B. Make It Increasing</h1>
-<h2 id="题意-2"><a class="markdownIt-Anchor" href="#题意-2"></a> 题意</h2>
-<p>给定数组，你可多次将某数 <strong>整除</strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span>，问能否将其变为严格单调递增的序列？ 如果有，回答最小操作次数。</p>
-<h2 id="解答-2"><a class="markdownIt-Anchor" href="#解答-2"></a> 解答</h2>
+<h1 id="b.-make-it-increasing">B. Make It Increasing</h1>
+<h2 id="题意-1">题意</h2>
+<p>给定数组，你可多次将某数 <strong>整除</strong> <span
+class="math inline">\(2\)</span>，问能否将其变为严格单调递增的序列？
+如果有，回答最小操作次数。</p>
+<h2 id="解答-1">解答</h2>
 <blockquote>
 <p>事实证明，不能 xjb 想特判，不然会死得很惨。</p>
 </blockquote>
 <p>固定最后一个值不动，从后往前遍历即可。</p>
-<details><summary>展开代码</summary>
+<details>
+<summary>
+展开代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
   <span class="hljs-type">int</span> n;
   std::cin &gt;&gt; n;
@@ -312,16 +325,23 @@
 &#125;</code></pre></div>
 </details>
 <blockquote>
-<p>复杂度： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>lg</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n \lg n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">l<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></p>
+<p>复杂度： <span class="math inline">\(\mathcal O(n \lg n)\)</span></p>
 </blockquote>
-<h1 id="c-detective-task"><a class="markdownIt-Anchor" href="#c-detective-task"></a> C. Detective Task</h1>
-<h2 id="题意-3"><a class="markdownIt-Anchor" href="#题意-3"></a> 题意</h2>
-<p>房间里放了一幅画，但是被贼了。小明询问他的朋友们 <strong>是否看到了画</strong>，朋友们将回答 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mn>0</mn><mi mathvariant="normal">/</mi><mo stretchy="false">?</mo></mrow><annotation encoding="application/x-tex">1 / 0 / ?</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">/</span><span class="mord">0</span><span class="mord">/</span><span class="mclose">?</span></span></span></span><br />
-表示肯定与否、记不清了。</p>
+<h1 id="c.-detective-task">C. Detective Task</h1>
+<h2 id="题意-2">题意</h2>
+<p>房间里放了一幅画，但是被贼了。小明询问他的朋友们
+<strong>是否看到了画</strong>，朋友们将回答 <span
+class="math inline">\(1 / 0 / ?\)</span> 表示肯定与否、记不清了。</p>
 <p>房间里某时刻仅有一个人，询问次序为离开次序。问有多少人可疑？</p>
-<h2 id="解答-3"><a class="markdownIt-Anchor" href="#解答-3"></a> 解答</h2>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mo>⋆</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0 \star 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋆</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 出现时，可以断定一定有人说谎，因此答案为首个 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 和最后一个 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 的距离。</p>
-<details><summary>展开代码</summary>
+<h2 id="解答-2">解答</h2>
+<p><span class="math inline">\(0 \star 1\)</span>
+出现时，可以断定一定有人说谎，因此答案为首个 <span
+class="math inline">\(0\)</span> 和最后一个 <span
+class="math inline">\(1\)</span> 的距离。</p>
+<details>
+<summary>
+展开代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
   std::string s;
   std::cin &gt;&gt; s;
@@ -346,14 +366,17 @@
 &#125;</code></pre></div>
 </details>
 <blockquote>
-<p>复杂度： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></p>
+<p>复杂度： <span class="math inline">\(\mathcal O(n)\)</span></p>
 </blockquote>
-<h1 id="d-vertical-paths"><a class="markdownIt-Anchor" href="#d-vertical-paths"></a> D. Vertical Paths</h1>
-<h2 id="题意-4"><a class="markdownIt-Anchor" href="#题意-4"></a> 题意</h2>
+<h1 id="d.-vertical-paths">D. Vertical Paths</h1>
+<h2 id="题意-3">题意</h2>
 <p>求最少的不交链将给定的树完全覆盖。</p>
-<h2 id="解答-4"><a class="markdownIt-Anchor" href="#解答-4"></a> 解答</h2>
+<h2 id="解答-3">解答</h2>
 <p>显然叶子个数即为所求。</p>
-<details><summary>展开代码</summary>
+<details>
+<summary>
+展开代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
   <span class="hljs-type">int</span> n;
   std::cin &gt;&gt; n;
@@ -392,15 +415,28 @@
 &#125;</code></pre></div>
 </details>
 <blockquote>
-<p>复杂度： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></p>
+<p>复杂度： <span class="math inline">\(\mathcal O(n)\)</span></p>
 </blockquote>
-<h1 id="e-replace-with-the-previous-minimize"><a class="markdownIt-Anchor" href="#e-replace-with-the-previous-minimize"></a> E. Replace With the Previous, Minimize</h1>
-<h2 id="题意-5"><a class="markdownIt-Anchor" href="#题意-5"></a> 题意</h2>
-<p>将出现的所有某字母 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 都变为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>。问这样对 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">s</span></span></span></span> 操作 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span> 次之后，得到的最小字符串是什么？</p>
-<h2 id="解答-5"><a class="markdownIt-Anchor" href="#解答-5"></a> 解答</h2>
-<p>在改变 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mo>→</mo><mi>b</mi><mo>→</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">c \rightarrow b \rightarrow a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">c</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span> 的过程中可以将 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi><mo separator="true">,</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">b, c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">c</span></span></span></span> 都变为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span>。因此我们只需要考虑怎么操作某一个较大的字符。</p>
-<p>需要字典序最小，因此考虑从左至右枚举，找到第一个大于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span> 的字符将其改小，小于该字符的实体都可变作 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">‘</mi><mi mathvariant="normal">‘</mi><mi>a</mi><mi mathvariant="normal">&quot;</mi></mrow><annotation encoding="application/x-tex">``a&quot;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">‘</span><span class="mord">‘</span><span class="mord mathdefault">a</span><span class="mord">&quot;</span></span></span></span>。</p>
-<details><summary>展开代码</summary>
+<h1 id="e.-replace-with-the-previous-minimize">E. Replace With the
+Previous, Minimize</h1>
+<h2 id="题意-4">题意</h2>
+<p>将出现的所有某字母 <span class="math inline">\(x\)</span> 都变为
+<span class="math inline">\(x - 1\)</span>。问这样对 <span
+class="math inline">\(s\)</span> 操作 <span
+class="math inline">\(k\)</span> 次之后，得到的最小字符串是什么？</p>
+<h2 id="解答-4">解答</h2>
+<p>在改变 <span class="math inline">\(c \rightarrow b \rightarrow
+a\)</span> 的过程中可以将 <span class="math inline">\(b, c\)</span>
+都变为 <span
+class="math inline">\(a\)</span>。因此我们只需要考虑怎么操作某一个较大的字符。</p>
+<p>需要字典序最小，因此考虑从左至右枚举，找到第一个大于 <span
+class="math inline">\(k\)</span>
+的字符将其改小，小于该字符的实体都可变作 <span
+class="math inline">\(``a&quot;\)</span>。</p>
+<details>
+<summary>
+展开代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
   <span class="hljs-type">int</span> n, k;
   std::string s;
@@ -431,10 +467,14 @@
 &#125;</code></pre></div>
 </details>
 <blockquote>
-<p>复杂度： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></p>
+<p>复杂度： <span class="math inline">\(\mathcal O(n)\)</span></p>
 </blockquote>
-<p>Bonus: 将能同时变化的点连接起来，某个联通块内的字符都变为同一种字符。</p>
-<details><summary>展开代码</summary>
+<p>Bonus:
+将能同时变化的点连接起来，某个联通块内的字符都变为同一种字符。</p>
+<details>
+<summary>
+展开代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
   <span class="hljs-type">int</span> n, k;
   std::string s;
@@ -464,15 +504,24 @@
 &#125;</code></pre></div>
 </details>
 <blockquote>
-<p>复杂度： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>α</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n \alpha(n))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span></p>
+<p>复杂度： <span class="math inline">\(\mathcal O(n
+\alpha(n))\)</span></p>
 </blockquote>
-<h1 id="f-vlad-and-unfinished-business"><a class="markdownIt-Anchor" href="#f-vlad-and-unfinished-business"></a> F. Vlad and Unfinished Business</h1>
-<h2 id="题意-6"><a class="markdownIt-Anchor" href="#题意-6"></a> 题意</h2>
-<p>求在树上从 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 经过给定的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span> 个关键点到达 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span> 的最小步数。</p>
-<h2 id="解答-6"><a class="markdownIt-Anchor" href="#解答-6"></a> 解答</h2>
-<p>不妨以 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 为根，我们熟知树上两点的路是唯一的，因而要到达关键点的最优走法自然是遍历某子树的所有关键点，随后原路返回。</p>
-<p>特殊的，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span> 不需要折返，最终减去其深度即可。</p>
-<details><summary>展开代码</summary>
+<h1 id="f.-vlad-and-unfinished-business">F. Vlad and Unfinished
+Business</h1>
+<h2 id="题意-5">题意</h2>
+<p>求在树上从 <span class="math inline">\(x\)</span> 经过给定的 <span
+class="math inline">\(k\)</span> 个关键点到达 <span
+class="math inline">\(y\)</span> 的最小步数。</p>
+<h2 id="解答-5">解答</h2>
+<p>不妨以 <span class="math inline">\(x\)</span>
+为根，我们熟知树上两点的路是唯一的，因而要到达关键点的最优走法自然是遍历某子树的所有关键点，随后原路返回。</p>
+<p>特殊的，<span class="math inline">\(y\)</span>
+不需要折返，最终减去其深度即可。</p>
+<details>
+<summary>
+展开代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
   <span class="hljs-type">int</span> n, k, x, y;
   std::cin &gt;&gt; n &gt;&gt; k &gt;&gt; x &gt;&gt; y;
@@ -523,20 +572,29 @@
 &#125;</code></pre></div>
 </details>
 <blockquote>
-<p>复杂度： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></p>
+<p>复杂度： <span class="math inline">\(\mathcal O(n)\)</span></p>
 </blockquote>
-<h1 id="g-sorting-pancakes"><a class="markdownIt-Anchor" href="#g-sorting-pancakes"></a> G. Sorting Pancakes</h1>
-<h2 id="题意-7"><a class="markdownIt-Anchor" href="#题意-7"></a> 题意</h2>
-<p>给定一个和为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span> 的数组，可多次选择俩相邻元素，一个加一另一个减一。</p>
+<h1 id="g.-sorting-pancakes">G. Sorting Pancakes</h1>
+<h2 id="题意-6">题意</h2>
+<p>给定一个和为 <span class="math inline">\(m\)</span>
+的数组，可多次选择俩相邻元素，一个加一另一个减一。</p>
 <p>问最少操作多少此使得数组非严格递减？</p>
 <ul>
-<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mo>≤</mo><mn>250</mn></mrow><annotation encoding="application/x-tex">m \le 250</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">5</span><span class="mord">0</span></span></span></span></li>
+<li><span class="math inline">\(m \le 250\)</span></li>
 </ul>
-<h2 id="解答-7"><a class="markdownIt-Anchor" href="#解答-7"></a> 解答</h2>
-<p>用 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><msub><mi>p</mi><mrow><mo stretchy="false">{</mo><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo separator="true">,</mo><mi>k</mi><mo stretchy="false">}</mo></mrow></msub></mrow><annotation encoding="application/x-tex">dp_{\{i, j, k\}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04964em;vertical-align:-0.3551999999999999em;"></span><span class="mord mathdefault">d</span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">{</span><span class="mord mathdefault mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mclose mtight">}</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3551999999999999em;"><span></span></span></span></span></span></span></span></span></span> 表示前 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 个位置、<strong>当前和</strong> 为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span></span></span></span>、最后一个数是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span> 的满足题意的答案。</p>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><msub><mi>p</mi><mrow><mo stretchy="false">{</mo><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo separator="true">,</mo><mi>k</mi><mo stretchy="false">}</mo></mrow></msub><mo>=</mo><munder><mo><mi>min</mi><mo>⁡</mo></mo><mrow><mi>t</mi><mo>≤</mo><mi>k</mi></mrow></munder><mi>d</mi><msub><mi>p</mi><mrow><mo stretchy="false">{</mo><mi>i</mi><mo>−</mo><mn>1</mn><mo separator="true">,</mo><mi>j</mi><mo separator="true">,</mo><mi>t</mi><mo stretchy="false">}</mo></mrow></msub><mo>+</mo><mrow><mo fence="true">∣</mo><munderover><mo>∑</mo><mrow><mi>q</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></munderover><msub><mi>a</mi><mi>q</mi></msub><mo>−</mo><mo stretchy="false">(</mo><mi>j</mi><mo>+</mo><mi>k</mi><mo stretchy="false">)</mo><mo fence="true">∣</mo></mrow></mrow><annotation encoding="application/x-tex">dp_{\{i, j, k\}} = \min_{t \le k}dp_{\{i-1, j, t\}} + \left|\sum_{q = 1} ^ {i + 1}a_q - (j + k)\right|
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04964em;vertical-align:-0.3551999999999999em;"></span><span class="mord mathdefault">d</span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">{</span><span class="mord mathdefault mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mclose mtight">}</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3551999999999999em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.5417269999999998em;vertical-align:-0.8472869999999999em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.66786em;"><span style="top:-2.047892em;margin-left:0em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="mrel mtight">≤</span><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span><span class="mop">min</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8472869999999999em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">d</span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">{</span><span class="mord mathdefault mtight">i</span><span class="mbin mtight">−</span><span class="mord mtight">1</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight">t</span><span class="mclose mtight">}</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3551999999999999em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:3.2148900000000005em;vertical-align:-1.403221em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.7799749999999999em;"><span style="top:-1.355975em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-1.9619749999999998em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.5679749999999997em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-3.173975em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-3.779975em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.250025em;"><span></span></span></span></span></span></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8116690000000002em;"><span style="top:-1.8828869999999998em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">q</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.300005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.403221em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">q</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">)</span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.7799749999999999em;"><span style="top:-1.355975em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-1.9619749999999998em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.5679749999999997em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-3.173975em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-3.779975em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.250025em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
-<details><summary>展开代码</summary>
+<h2 id="解答-6">解答</h2>
+<p>用 <span class="math inline">\(dp_{\{i, j, k\}}\)</span> 表示前 <span
+class="math inline">\(i\)</span> 个位置、<strong>当前和</strong> 为
+<span class="math inline">\(j\)</span>、最后一个数是 <span
+class="math inline">\(k\)</span> 的满足题意的答案。</p>
+<p><span class="math display">\[
+dp_{\{i, j, k\}} = \min_{t \le k}dp_{\{i-1, j, t\}} + \left|\sum_{q = 1}
+^ {i + 1}a_q - (j + k)\right|
+\]</span></p>
+<details>
+<summary>
+展开代码
+</summary>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
 
 <span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> T&gt; <span class="hljs-keyword">inline</span> <span class="hljs-type">void</span> <span class="hljs-title">chmin</span><span class="hljs-params">(T &amp;x, T y)</span> </span>&#123; x = x &lt; y ? x : y; &#125;
@@ -576,7 +634,7 @@
 &#125;</code></pre></div>
 </details>
 <blockquote>
-<p>复杂度： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>n</mi><msup><mi>m</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n m ^ 2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
+<p>复杂度： <span class="math inline">\(\mathcal O(n m ^ 2)\)</span></p>
 </blockquote>
 
             </div>
@@ -778,8 +836,43 @@
   
 
   
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css" />
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
   
 
 
