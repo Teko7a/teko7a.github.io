@@ -109,6 +109,8 @@
       
       <tag>dp</tag>
       
+      <tag>binary search</tag>
+      
       <tag>todo</tag>
       
       <tag>dsu</tag>
@@ -117,15 +119,13 @@
       
       <tag>greedy</tag>
       
-      <tag>找环</tag>
+      <tag>circle</tag>
       
-      <tag>二分</tag>
+      <tag>constructive</tag>
       
-      <tag>构造</tag>
+      <tag>bitwise</tag>
       
-      <tag>位运算</tag>
-      
-      <tag>数位背包</tag>
+      <tag>digit knapsack</tag>
       
     </tags>
     
@@ -181,7 +181,7 @@
       
       <tag>Kahn</tag>
       
-      <tag>拓扑排序</tag>
+      <tag>Topo-order</tag>
       
     </tags>
     
@@ -210,13 +210,13 @@
       
       <tag>todo</tag>
       
-      <tag>循环节</tag>
+      <tag>period</tag>
       
-      <tag>五边形数</tag>
+      <tag>Pentagonal number</tag>
       
-      <tag>背包计数</tag>
+      <tag>knapsack problem counting</tag>
       
-      <tag>数论</tag>
+      <tag>Number Thoery</tag>
       
       <tag>crt</tag>
       
