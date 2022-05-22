@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=light>
+<html lang="en" >
 
 
 
@@ -47,7 +47,13 @@
     
     
       
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/atom-one-dark.min.css" />
+      
+        
+          
+        
+        <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism.min.css" />
+      
+      
     
   
 
@@ -177,11 +183,6 @@
           </li>
         
         
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -219,7 +220,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      6.6k words(or CN characters)
+      6.1k words(or CN characters)
     </span>
   
 
@@ -228,7 +229,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      10 minutes
+      9 minutes
     </span>
   
 
@@ -277,16 +278,16 @@ class="math inline">\(y\)</span>，或回答不可能。</p>
 <summary>
 展开代码
 </summary>
-<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
-  <span class="hljs-type">int</span> a, b;
-  std::cin &gt;&gt; a &gt;&gt; b;
+<div class="code-wrapper"><pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">;</span>
+  std<span class="token double-colon punctuation">::</span>cin <span class="token operator">>></span> a <span class="token operator">>></span> b<span class="token punctuation">;</span>
 
-  <span class="hljs-keyword">if</span> (b % a != <span class="hljs-number">0</span> || b &lt; a) &#123;
-    <span class="hljs-keyword">return</span> std::cout &lt;&lt; <span class="hljs-string">&quot;0 0\n&quot;</span>, <span class="hljs-built_in">void</span>();
-  &#125;
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>b <span class="token operator">%</span> a <span class="token operator">!=</span> <span class="token number">0</span> <span class="token operator">||</span> b <span class="token operator">&lt;</span> a<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"0 0\n"</span><span class="token punctuation">,</span> <span class="token keyword">void</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
 
-  std::cout &lt;&lt; <span class="hljs-number">1</span> &lt;&lt; <span class="hljs-string">&#x27; &#x27;</span> &lt;&lt; (b / a) &lt;&lt; <span class="hljs-string">&#x27;\n&#x27;</span>;
-&#125;</code></pre></div>
+  std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token char">' '</span> <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>b <span class="token operator">/</span> a<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token char">'\n'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre></div>
 </details>
 <blockquote>
 <p>复杂度： <span class="math inline">\(\mathcal O(1)\)</span></p>
@@ -302,33 +303,33 @@ class="math inline">\(s\)</span> 居于第几？</p>
 <summary>
 展开代码
 </summary>
-<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
-  <span class="hljs-type">static</span> <span class="hljs-type">bool</span> initialized = <span class="hljs-literal">false</span>;
-  <span class="hljs-type">static</span> std::map&lt;std::array&lt;<span class="hljs-type">char</span>, 2&gt;, <span class="hljs-type">int</span>&gt; mp;
-  <span class="hljs-keyword">if</span> (!initialized) &#123;
-    initialized ^= <span class="hljs-number">1</span>;
-    <span class="hljs-type">int</span> idx = <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">26</span>; ++i) &#123;
-      <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">26</span>; ++j) &#123;
-        <span class="hljs-keyword">if</span> (i == j) &#123;
-          <span class="hljs-keyword">continue</span>;
-        &#125; <span class="hljs-keyword">else</span> &#123;
-          std::array&lt;<span class="hljs-type">char</span>, <span class="hljs-number">2</span>&gt; c;
-          c[<span class="hljs-number">0</span>] = <span class="hljs-string">&#x27;a&#x27;</span> + i;
-          c[<span class="hljs-number">1</span>] = <span class="hljs-string">&#x27;a&#x27;</span> + j;
-          mp[c] = idx ++;
-        &#125;
-      &#125;
-    &#125;
-  &#125;
+<div class="code-wrapper"><pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">static</span> <span class="token keyword">bool</span> initialized <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token keyword">static</span> std<span class="token double-colon punctuation">::</span>map<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>array<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token operator">></span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">></span> mp<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>initialized<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    initialized <span class="token operator">^=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> idx <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">26</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">26</span><span class="token punctuation">;</span> <span class="token operator">++</span>j<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> j<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+          <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+          std<span class="token double-colon punctuation">::</span>array<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token operator">></span> c<span class="token punctuation">;</span>
+          c<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token char">'a'</span> <span class="token operator">+</span> i<span class="token punctuation">;</span>
+          c<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token char">'a'</span> <span class="token operator">+</span> j<span class="token punctuation">;</span>
+          mp<span class="token punctuation">[</span>c<span class="token punctuation">]</span> <span class="token operator">=</span> idx <span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
 
-  std::array&lt;<span class="hljs-type">char</span>, 2&gt; c;
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> &amp;ch : c) &#123;
-    std::cin &gt;&gt; ch;
-  &#125;
+  std<span class="token double-colon punctuation">::</span>array<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token operator">></span> c<span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token operator">&amp;</span>ch <span class="token operator">:</span> c<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    std<span class="token double-colon punctuation">::</span>cin <span class="token operator">>></span> ch<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
 
-  std::cout &lt;&lt; mp[c] &lt;&lt; <span class="hljs-string">&#x27;\n&#x27;</span>;
-&#125;</code></pre></div>
+  std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> mp<span class="token punctuation">[</span>c<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token char">'\n'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre></div>
 </details>
 <blockquote>
 <p>复杂度： <span class="math inline">\(\mathcal O(|\Sigma| ^ 2 + T \log
@@ -343,13 +344,13 @@ b\)</span> 分类讨论。</p>
 <summary>
 展开代码
 </summary>
-<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
-  <span class="hljs-type">char</span> a, b;
-  std::cin &gt;&gt; a &gt;&gt; b;
-  a -= <span class="hljs-string">&#x27;a&#x27;</span>, b -= <span class="hljs-string">&#x27;a&#x27;</span>;
+<div class="code-wrapper"><pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">char</span> a<span class="token punctuation">,</span> b<span class="token punctuation">;</span>
+  std<span class="token double-colon punctuation">::</span>cin <span class="token operator">>></span> a <span class="token operator">>></span> b<span class="token punctuation">;</span>
+  a <span class="token operator">-=</span> <span class="token char">'a'</span><span class="token punctuation">,</span> b <span class="token operator">-=</span> <span class="token char">'a'</span><span class="token punctuation">;</span>
 
-  std::cout &lt;&lt; <span class="hljs-number">25</span> * a + b - (b &gt; a) + <span class="hljs-number">1</span> &lt;&lt; <span class="hljs-string">&#x27;\n&#x27;</span>;
-&#125;</code></pre></div>
+  std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token number">25</span> <span class="token operator">*</span> a <span class="token operator">+</span> b <span class="token operator">-</span> <span class="token punctuation">(</span>b <span class="token operator">></span> a<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token char">'\n'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre></div>
 </details>
 <blockquote>
 <p>复杂度： <span class="math inline">\(\mathcal O(1)\)</span></p>
@@ -366,7 +367,7 @@ class="math inline">\(t\)</span>，问有多少种可能的字符串？</p>
 ``a&quot;\)</span>，那么总有最初的那一种。如果替换上去的部分依然包含
 <span
 class="math inline">\(``a&quot;\)</span>，那么有无穷多种可能。正如：</p>
-<div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&#123;&#125;&#x27;</span>.<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;&#123;&#125;&#x27;</span>).<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;&#123;&#125;&#x27;</span>).<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;&#123;&#125;&#x27;</span>).<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;&#123;&#125;&#x27;</span>))</code></pre></div>
+<div class="code-wrapper"><pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'&#123;&#125;'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token string">'&#123;&#125;'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token string">'&#123;&#125;'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token string">'&#123;&#125;'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token string">'&#123;&#125;'</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre></div>
 <p>否则（<span class="math inline">\(``a&quot; \notin t\)</span>）,
 原串中的每一个位置都可以选择换或者不换，于是方案数为 <span
 class="math inline">\(2 ^ n\)</span>。</p>
@@ -374,20 +375,20 @@ class="math inline">\(2 ^ n\)</span>。</p>
 <summary>
 展开代码
 </summary>
-<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
-  std::string s, t;
-  std::cin &gt;&gt; s &gt;&gt; t;
+<div class="code-wrapper"><pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  std<span class="token double-colon punctuation">::</span>string s<span class="token punctuation">,</span> t<span class="token punctuation">;</span>
+  std<span class="token double-colon punctuation">::</span>cin <span class="token operator">>></span> s <span class="token operator">>></span> t<span class="token punctuation">;</span>
 
-  <span class="hljs-keyword">if</span> (std::<span class="hljs-built_in">count</span>(t.<span class="hljs-built_in">begin</span>(), t.<span class="hljs-built_in">end</span>(), <span class="hljs-string">&#x27;a&#x27;</span>) != <span class="hljs-number">0</span>) &#123;
-    <span class="hljs-keyword">if</span> (t == <span class="hljs-string">&quot;a&quot;</span>) &#123;
-      <span class="hljs-keyword">return</span> std::cout &lt;&lt; <span class="hljs-string">&quot;1\n&quot;</span>, <span class="hljs-built_in">void</span>();
-    &#125; <span class="hljs-keyword">else</span> &#123;
-      <span class="hljs-keyword">return</span> std::cout &lt;&lt; <span class="hljs-string">&quot;-1\n&quot;</span>, <span class="hljs-built_in">void</span>();
-    &#125;
-  &#125;
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>std<span class="token double-colon punctuation">::</span><span class="token function">count</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> t<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token char">'a'</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>t <span class="token operator">==</span> <span class="token string">"a"</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">return</span> std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"1\n"</span><span class="token punctuation">,</span> <span class="token keyword">void</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">return</span> std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"-1\n"</span><span class="token punctuation">,</span> <span class="token keyword">void</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
 
-  std::cout &lt;&lt; (<span class="hljs-number">1LL</span> &lt;&lt; s.<span class="hljs-built_in">size</span>()) &lt;&lt; <span class="hljs-string">&#x27;\n&#x27;</span>;
-&#125;</code></pre></div>
+  std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span><span class="token number">1LL</span> <span class="token operator">&lt;&lt;</span> s<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token char">'\n'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre></div>
 </details>
 <blockquote>
 <p>复杂度： <span class="math inline">\(\mathcal O(|t|)\)</span></p>
@@ -403,35 +404,35 @@ class="math inline">\(\{C\}\)</span> 是否能变为单调不减的序列？</p>
 <summary>
 这一段的 LaTeX 代码
 </summary>
-<div class="hljs code-wrapper"><pre><code class="hljs latex"><span class="hljs-keyword">\def</span><span class="hljs-keyword">\SetClass</span>&#123;article&#125;
-<span class="hljs-keyword">\documentclass</span>&#123;<span class="hljs-keyword">\SetClass</span>&#125;
-<span class="hljs-keyword">\usepackage</span>[lined,boxed,commentsnumbered]&#123;algorithm2e&#125;
-<span class="hljs-keyword">\begin</span>&#123;document&#125;
-<span class="hljs-keyword">\begin</span>&#123;algorithm&#125;[H]
-  <span class="hljs-keyword">\SetAlgoLined</span>
-<span class="hljs-comment">%%  \KwData&#123; \&#123; A \&#125;&#125;</span>
-<span class="hljs-comment">%%  \KwResult&#123;&#125;</span>
+<div class="code-wrapper"><pre class="language-latex" data-language="latex"><code class="language-latex"><span class="token function selector">\def</span><span class="token function selector">\SetClass</span><span class="token punctuation">&#123;</span>article<span class="token punctuation">&#125;</span>
+<span class="token function selector">\documentclass</span><span class="token punctuation">&#123;</span><span class="token keyword">\SetClass</span><span class="token punctuation">&#125;</span>
+<span class="token function selector">\usepackage</span><span class="token punctuation">[</span>lined,boxed,commentsnumbered<span class="token punctuation">]</span><span class="token punctuation">&#123;</span><span class="token keyword">algorithm2e</span><span class="token punctuation">&#125;</span>
+<span class="token function selector">\begin</span><span class="token punctuation">&#123;</span><span class="token keyword">document</span><span class="token punctuation">&#125;</span>
+<span class="token function selector">\begin</span><span class="token punctuation">&#123;</span><span class="token keyword">algorithm</span><span class="token punctuation">&#125;</span><span class="token punctuation">[</span>H<span class="token punctuation">]</span>
+  <span class="token function selector">\SetAlgoLined</span>
+<span class="token comment">%%  \KwData&#123; \&#123; A \&#125;&#125;</span>
+<span class="token comment">%%  \KwResult&#123;&#125;</span>
 
-  <span class="hljs-keyword">\While</span>&#123; <span class="hljs-keyword">\&#123;</span>A<span class="hljs-keyword">\&#125;</span> is not empty &#125;&#123;
-    <span class="hljs-keyword">\eIf</span>&#123; <span class="hljs-keyword">\&#123;</span>B<span class="hljs-keyword">\&#125;</span> is odd long &#125;&#123;
-      <span class="hljs-built_in">$</span>p <span class="hljs-keyword">\leftarrow</span><span class="hljs-built_in">$</span> B[middle - 1] or B[middle + 1]
-    &#125;&#123;
-      <span class="hljs-built_in">$</span>p <span class="hljs-keyword">\leftarrow</span><span class="hljs-built_in">$</span> B[middle]
-    &#125;
-    move last element of <span class="hljs-keyword">\&#123;</span>A<span class="hljs-keyword">\&#125;</span> to B<span class="hljs-built_in">$</span><span class="hljs-built_in">_</span>p<span class="hljs-built_in">$</span>
-  &#125;
+  <span class="token function selector">\While</span><span class="token punctuation">&#123;</span> <span class="token function selector">\&#123;</span>A<span class="token function selector">\&#125;</span> is not empty <span class="token punctuation">&#125;</span><span class="token punctuation">&#123;</span>
+    <span class="token function selector">\eIf</span><span class="token punctuation">&#123;</span> <span class="token function selector">\&#123;</span>B<span class="token function selector">\&#125;</span> is odd long <span class="token punctuation">&#125;</span><span class="token punctuation">&#123;</span>
+      <span class="token equation string">$p <span class="token equation-command regex">\leftarrow</span>$</span> B<span class="token punctuation">[</span>middle - 1<span class="token punctuation">]</span> or B<span class="token punctuation">[</span>middle + 1<span class="token punctuation">]</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">&#123;</span>
+      <span class="token equation string">$p <span class="token equation-command regex">\leftarrow</span>$</span> B<span class="token punctuation">[</span>middle<span class="token punctuation">]</span>
+    <span class="token punctuation">&#125;</span>
+    move last element of <span class="token function selector">\&#123;</span>A<span class="token function selector">\&#125;</span> to B<span class="token equation string">$_p$</span>
+  <span class="token punctuation">&#125;</span>
 
-  <span class="hljs-keyword">\While</span>&#123; <span class="hljs-keyword">\&#123;</span>B<span class="hljs-keyword">\&#125;</span> is not empty &#125;&#123;
-    <span class="hljs-keyword">\eIf</span>&#123; <span class="hljs-keyword">\&#123;</span>B<span class="hljs-keyword">\&#125;</span> is even long &#125;&#123;
-      <span class="hljs-built_in">$</span>p <span class="hljs-keyword">\leftarrow</span><span class="hljs-built_in">$</span> B[middle - 1] or B[middle + 1]
-    &#125;&#123;
-      <span class="hljs-built_in">$</span>p <span class="hljs-keyword">\leftarrow</span><span class="hljs-built_in">$</span> B[middle]
-    &#125;
-    append B<span class="hljs-built_in">$</span><span class="hljs-built_in">_</span>p<span class="hljs-built_in">$</span> to the end of <span class="hljs-keyword">\&#123;</span>C<span class="hljs-keyword">\&#125;</span>
-  &#125;
-  <span class="hljs-keyword">\caption</span>&#123;A-B-C Sort Algorithm&#125;
-<span class="hljs-keyword">\end</span>&#123;algorithm&#125;
-<span class="hljs-keyword">\end</span>&#123;document&#125;</code></pre></div>
+  <span class="token function selector">\While</span><span class="token punctuation">&#123;</span> <span class="token function selector">\&#123;</span>B<span class="token function selector">\&#125;</span> is not empty <span class="token punctuation">&#125;</span><span class="token punctuation">&#123;</span>
+    <span class="token function selector">\eIf</span><span class="token punctuation">&#123;</span> <span class="token function selector">\&#123;</span>B<span class="token function selector">\&#125;</span> is even long <span class="token punctuation">&#125;</span><span class="token punctuation">&#123;</span>
+      <span class="token equation string">$p <span class="token equation-command regex">\leftarrow</span>$</span> B<span class="token punctuation">[</span>middle - 1<span class="token punctuation">]</span> or B<span class="token punctuation">[</span>middle + 1<span class="token punctuation">]</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">&#123;</span>
+      <span class="token equation string">$p <span class="token equation-command regex">\leftarrow</span>$</span> B<span class="token punctuation">[</span>middle<span class="token punctuation">]</span>
+    <span class="token punctuation">&#125;</span>
+    append B<span class="token equation string">$_p$</span> to the end of <span class="token function selector">\&#123;</span>C<span class="token function selector">\&#125;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token function selector">\caption</span><span class="token punctuation">&#123;</span>A-B-C Sort Algorithm<span class="token punctuation">&#125;</span>
+<span class="token function selector">\end</span><span class="token punctuation">&#123;</span><span class="token keyword">algorithm</span><span class="token punctuation">&#125;</span>
+<span class="token function selector">\end</span><span class="token punctuation">&#123;</span><span class="token keyword">document</span><span class="token punctuation">&#125;</span></code></pre></div>
 </details>
 <h2 id="解答-3">解答</h2>
 <p>上述算法两个步骤基本互逆，这使得我们
@@ -442,23 +443,23 @@ class="math inline">\(\{C\}\)</span> 是否能变为单调不减的序列？</p>
 <summary>
 展开代码
 </summary>
-<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
-  <span class="hljs-type">int</span> n;
-  std::cin &gt;&gt; n;
-  <span class="hljs-function">std::vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">a</span><span class="hljs-params">(n)</span></span>;
+<div class="code-wrapper"><pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> n<span class="token punctuation">;</span>
+  std<span class="token double-colon punctuation">::</span>cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
+  std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">a</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> &amp;i : a) &#123;
-    std::cin &gt;&gt; i;
-  &#125;
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token operator">&amp;</span>i <span class="token operator">:</span> a<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    std<span class="token double-colon punctuation">::</span>cin <span class="token operator">>></span> i<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
 
-  <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = n - <span class="hljs-number">2</span>; i &gt;= <span class="hljs-number">0</span>; i -= <span class="hljs-number">2</span>) &#123;
-    <span class="hljs-keyword">if</span> (a[i] &gt; a[i + <span class="hljs-number">1</span>]) &#123;
-      std::<span class="hljs-built_in">swap</span>(a[i], a[i + <span class="hljs-number">1</span>]);
-    &#125;
-  &#125;
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> n <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">-=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> a<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      std<span class="token double-colon punctuation">::</span><span class="token function">swap</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
 
-  std::cout &lt;&lt; (std::<span class="hljs-built_in">is_sorted</span>(a.<span class="hljs-built_in">begin</span>(), a.<span class="hljs-built_in">end</span>()) ? <span class="hljs-string">&quot;yes\n&quot;</span> : <span class="hljs-string">&quot;no\n&quot;</span>);
-&#125;</code></pre></div>
+  std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>std<span class="token double-colon punctuation">::</span><span class="token function">is_sorted</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">"yes\n"</span> <span class="token operator">:</span> <span class="token string">"no\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre></div>
 </details>
 <blockquote>
 <p>复杂度： <span class="math inline">\(\mathcal O(n)\)</span></p>
@@ -468,16 +469,16 @@ class="math inline">\(\{C\}\)</span> 是否能变为单调不减的序列？</p>
 <summary>
 展开代码
 </summary>
-<div class="hljs code-wrapper"><pre><code class="hljs cpp">std::vector&lt;<span class="hljs-type">int</span>&gt; b;
+<div class="code-wrapper"><pre class="language-cpp" data-language="cpp"><code class="language-cpp">std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> b<span class="token punctuation">;</span>
 
-<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; ++i) &#123;
-  <span class="hljs-keyword">if</span> ((n - i) % <span class="hljs-number">2</span> == <span class="hljs-number">0</span> &amp;&amp; a[i] &gt; a[i + <span class="hljs-number">1</span>]) &#123;
-    std::<span class="hljs-built_in">swap</span>(a[i], a[i + <span class="hljs-number">1</span>]);
-  &#125;
-  b.<span class="hljs-built_in">push_back</span>(a[i]);
-&#125;
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>n <span class="token operator">-</span> i<span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> a<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    std<span class="token double-colon punctuation">::</span><span class="token function">swap</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  b<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
-std::cout &lt;&lt; (std::<span class="hljs-built_in">is_sorted</span>(b.<span class="hljs-built_in">begin</span>(), b.<span class="hljs-built_in">end</span>()) ? <span class="hljs-string">&quot;YES\n&quot;</span> : <span class="hljs-string">&quot;NO\n&quot;</span>);</code></pre></div>
+std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>std<span class="token double-colon punctuation">::</span><span class="token function">is_sorted</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> b<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">"YES\n"</span> <span class="token operator">:</span> <span class="token string">"NO\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 </details>
 <h1 id="e.-breaking-the-wall">E. Breaking the Wall</h1>
 <blockquote>
@@ -504,46 +505,46 @@ class="math inline">\(&lt; 0\)</span> ？</p>
 <summary>
 展开代码
 </summary>
-<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;
-  <span class="hljs-type">int</span> n;
-  std::cin &gt;&gt; n;
+<div class="code-wrapper"><pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> n<span class="token punctuation">;</span>
+  std<span class="token double-colon punctuation">::</span>cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
 
-  <span class="hljs-keyword">auto</span> C = [&amp;](<span class="hljs-type">int</span> n, <span class="hljs-type">int</span> d = <span class="hljs-number">2</span>) &#123;
-    <span class="hljs-built_in">return</span> (n + d - <span class="hljs-number">1</span>) / d;
-  &#125;;
+  <span class="token keyword">auto</span> C <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">,</span> <span class="token keyword">int</span> d <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>n <span class="token operator">+</span> d <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> d<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
 
-  <span class="hljs-function">std::vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">a</span><span class="hljs-params">(n)</span></span>;
+  std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">a</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="hljs-type">int</span> m1 = INT_MAX, m2 = INT_MAX;
+  <span class="token keyword">int</span> m1 <span class="token operator">=</span> INT_MAX<span class="token punctuation">,</span> m2 <span class="token operator">=</span> INT_MAX<span class="token punctuation">;</span>
 
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> &amp;i : a) &#123;
-    std::cin &gt;&gt; i;
-    <span class="hljs-keyword">if</span> (i &lt; m1) &#123;
-      std::<span class="hljs-built_in">tie</span>(m1, m2) = std::tuple&#123;i, m1&#125;;
-    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (i &lt; m2) &#123;
-      m2 = i;
-    &#125;
-  &#125;
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token operator">&amp;</span>i <span class="token operator">:</span> a<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    std<span class="token double-colon punctuation">::</span>cin <span class="token operator">>></span> i<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> m1<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      std<span class="token double-colon punctuation">::</span><span class="token function">tie</span><span class="token punctuation">(</span>m1<span class="token punctuation">,</span> m2<span class="token punctuation">)</span> <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span>tuple<span class="token punctuation">&#123;</span>i<span class="token punctuation">,</span> m1<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> m2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      m2 <span class="token operator">=</span> i<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
 
-  <span class="hljs-type">int</span> ans = <span class="hljs-built_in">C</span>(m1) + <span class="hljs-built_in">C</span>(m2);
+  <span class="token keyword">int</span> ans <span class="token operator">=</span> <span class="token function">C</span><span class="token punctuation">(</span>m1<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">C</span><span class="token punctuation">(</span>m2<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n - <span class="hljs-number">1</span>; ++i) &#123;
-    <span class="hljs-type">int</span> A = a[i], B = a[i + <span class="hljs-number">1</span>];
-    ans = std::<span class="hljs-built_in">min</span>(ans, std::<span class="hljs-built_in">max</span>(&#123; <span class="hljs-built_in">C</span>(A), <span class="hljs-built_in">C</span>(B), <span class="hljs-built_in">C</span>(A + B, <span class="hljs-number">3</span>) &#125;));
-  &#125;
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">int</span> A <span class="token operator">=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> B <span class="token operator">=</span> a<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    ans <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token function">min</span><span class="token punctuation">(</span>ans<span class="token punctuation">,</span> std<span class="token double-colon punctuation">::</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> <span class="token function">C</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">C</span><span class="token punctuation">(</span>B<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">C</span><span class="token punctuation">(</span>A <span class="token operator">+</span> B<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
 
-  <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n - <span class="hljs-number">2</span>; ++i) &#123;
-    <span class="hljs-type">int</span> A = a[i], B = a[i + <span class="hljs-number">2</span>];
-    <span class="hljs-keyword">if</span> (A &gt; B) &#123;
-      std::<span class="hljs-built_in">swap</span>(A, B);
-    &#125;
-    ans = std::<span class="hljs-built_in">min</span>(ans, A + <span class="hljs-built_in">C</span>(B - A, <span class="hljs-number">2</span>));
-  &#125;
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">int</span> A <span class="token operator">=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> B <span class="token operator">=</span> a<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>A <span class="token operator">></span> B<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      std<span class="token double-colon punctuation">::</span><span class="token function">swap</span><span class="token punctuation">(</span>A<span class="token punctuation">,</span> B<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    ans <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token function">min</span><span class="token punctuation">(</span>ans<span class="token punctuation">,</span> A <span class="token operator">+</span> <span class="token function">C</span><span class="token punctuation">(</span>B <span class="token operator">-</span> A<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
 
-  std::cout &lt;&lt; ans &lt;&lt; <span class="hljs-string">&#x27;\n&#x27;</span>;
+  std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> ans <span class="token operator">&lt;&lt;</span> <span class="token char">'\n'</span><span class="token punctuation">;</span>
 
-  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> ^ <span class="hljs-number">0</span>;
-&#125;</code></pre></div>
+  <span class="token keyword">return</span> <span class="token number">0</span> <span class="token operator">^</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre></div>
 </details>
 <blockquote>
 <p>复杂度： <span class="math inline">\(\mathcal O(n)\)</span></p>
@@ -567,62 +568,62 @@ class="math inline">\(\mathcal O(1)\)</span> 的。</p>
 <summary>
 展开代码
 </summary>
-<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;
-  std::cin.<span class="hljs-built_in">tie</span>(<span class="hljs-literal">nullptr</span>)-&gt;<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-literal">false</span>);
+<div class="code-wrapper"><pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  std<span class="token double-colon punctuation">::</span>cin<span class="token punctuation">.</span><span class="token function">tie</span><span class="token punctuation">(</span><span class="token keyword">nullptr</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token function">sync_with_stdio</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="hljs-type">int</span> n, m, q;
-  std::cin &gt;&gt; n &gt;&gt; m &gt;&gt; q;
+  <span class="token keyword">int</span> n<span class="token punctuation">,</span> m<span class="token punctuation">,</span> q<span class="token punctuation">;</span>
+  std<span class="token double-colon punctuation">::</span>cin <span class="token operator">>></span> n <span class="token operator">>></span> m <span class="token operator">>></span> q<span class="token punctuation">;</span>
 
-  <span class="hljs-function">std::vector&lt;<span class="hljs-type">bool</span>&gt; <span class="hljs-title">possessed</span><span class="hljs-params">(n * m)</span></span>;
+  std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">bool</span><span class="token operator">></span> <span class="token function">possessed</span><span class="token punctuation">(</span>n <span class="token operator">*</span> m<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="hljs-type">int</span> cnt = <span class="hljs-number">0</span>, o = <span class="hljs-number">0</span>;
+  <span class="token keyword">int</span> cnt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> o <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
-  <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; ++i) &#123;
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; m; ++j) &#123;
-      <span class="hljs-type">char</span> ch;
-      std::cin &gt;&gt; ch;
-      <span class="hljs-keyword">if</span> (ch == <span class="hljs-string">&#x27;*&#x27;</span>) &#123;
-        <span class="hljs-keyword">if</span> (possessed[cnt]) &#123;
-          o += <span class="hljs-number">1</span>;
-        &#125;
-        cnt += <span class="hljs-number">1</span>;
-        possessed[j * n + i] = <span class="hljs-number">1</span>;
-        <span class="hljs-keyword">if</span> (j * n + i &lt; cnt) &#123;
-          o += <span class="hljs-number">1</span>;
-        &#125;
-      &#125;
-    &#125;
-  &#125;
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> m<span class="token punctuation">;</span> <span class="token operator">++</span>j<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">char</span> ch<span class="token punctuation">;</span>
+      std<span class="token double-colon punctuation">::</span>cin <span class="token operator">>></span> ch<span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>ch <span class="token operator">==</span> <span class="token char">'*'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>possessed<span class="token punctuation">[</span>cnt<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+          o <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        cnt <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        possessed<span class="token punctuation">[</span>j <span class="token operator">*</span> n <span class="token operator">+</span> i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>j <span class="token operator">*</span> n <span class="token operator">+</span> i <span class="token operator">&lt;</span> cnt<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+          o <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
 
-  <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> x, y; q != <span class="hljs-number">0</span>; --q) &#123;
-    std::cin &gt;&gt; x &gt;&gt; y;
-    <span class="hljs-type">int</span> i = -- y * n + -- x;
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> y<span class="token punctuation">;</span> q <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token operator">--</span>q<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    std<span class="token double-colon punctuation">::</span>cin <span class="token operator">>></span> x <span class="token operator">>></span> y<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token operator">--</span> y <span class="token operator">*</span> n <span class="token operator">+</span> <span class="token operator">--</span> x<span class="token punctuation">;</span>
 
-    <span class="hljs-keyword">if</span> (possessed[i]) &#123;
-      <span class="hljs-keyword">if</span> (i &lt; cnt) &#123;
-        o -= <span class="hljs-number">1</span>;
-      &#125;
-      cnt -= <span class="hljs-number">1</span>;
-      possessed[i].<span class="hljs-built_in">flip</span>();
-      <span class="hljs-keyword">if</span> (possessed[cnt]) &#123;
-        o -= <span class="hljs-number">1</span>;
-      &#125;
-    &#125; <span class="hljs-keyword">else</span> &#123;
-      <span class="hljs-keyword">if</span> (possessed[cnt]) &#123;
-        o += <span class="hljs-number">1</span>;
-      &#125;
-      cnt += <span class="hljs-number">1</span>;
-      possessed[i].<span class="hljs-built_in">flip</span>();
-      <span class="hljs-keyword">if</span> (i &lt; cnt) &#123;
-        o += <span class="hljs-number">1</span>;
-      &#125;
-    &#125;
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>possessed<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> cnt<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        o <span class="token operator">-=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+      cnt <span class="token operator">-=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+      possessed<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">flip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>possessed<span class="token punctuation">[</span>cnt<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        o <span class="token operator">-=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>possessed<span class="token punctuation">[</span>cnt<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        o <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+      cnt <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+      possessed<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">flip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> cnt<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        o <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
 
-    std::cout &lt;&lt; cnt - o &lt;&lt; <span class="hljs-string">&#x27;\n&#x27;</span>;
-  &#125;
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> cnt <span class="token operator">-</span> o <span class="token operator">&lt;&lt;</span> <span class="token char">'\n'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
 
-  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> ^ <span class="hljs-number">0</span>;
-&#125;</code></pre></div>
+  <span class="token keyword">return</span> <span class="token number">0</span> <span class="token operator">^</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre></div>
 </details>
 <blockquote>
 <p>复杂度： <span class="math inline">\(\mathcal O(n \times m +
@@ -653,60 +654,60 @@ class="math inline">\(DAG\)</span>, 使用拓扑排序的 Kahn 算法即可。</
 <summary>
 展开代码
 </summary>
-<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-type">static</span> <span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">200&#x27;007</span>;
+<div class="code-wrapper"><pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">static</span> <span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">200'007</span><span class="token punctuation">;</span>
 
-std::pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; e[N];
-<span class="hljs-type">int</span> deg[N][<span class="hljs-number">2</span>];
-<span class="hljs-type">int</span> nd[N];
-<span class="hljs-type">int</span> dp[N];
-std::vector&lt;<span class="hljs-type">int</span>&gt; v[N];
+std<span class="token double-colon punctuation">::</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">></span> e<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> deg<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> nd<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> dp<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> v<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;
-  std::cin.<span class="hljs-built_in">tie</span>(<span class="hljs-literal">nullptr</span>)-&gt;<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-literal">false</span>);
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  std<span class="token double-colon punctuation">::</span>cin<span class="token punctuation">.</span><span class="token function">tie</span><span class="token punctuation">(</span><span class="token keyword">nullptr</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token function">sync_with_stdio</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="hljs-type">int</span> n, m;
-  std::cin &gt;&gt; n &gt;&gt; m;
+  <span class="token keyword">int</span> n<span class="token punctuation">,</span> m<span class="token punctuation">;</span>
+  std<span class="token double-colon punctuation">::</span>cin <span class="token operator">>></span> n <span class="token operator">>></span> m<span class="token punctuation">;</span>
 
-  <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= m; ++i) &#123;
-    <span class="hljs-keyword">auto</span> &amp;[x, y] = e[i];
-    std::cin &gt;&gt; x &gt;&gt; y;
-    ++ deg[x][<span class="hljs-number">0</span>], ++ deg[y][<span class="hljs-number">1</span>];
-  &#125;
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> m<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">auto</span> <span class="token operator">&amp;</span><span class="token punctuation">[</span>x<span class="token punctuation">,</span> y<span class="token punctuation">]</span> <span class="token operator">=</span> e<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    std<span class="token double-colon punctuation">::</span>cin <span class="token operator">>></span> x <span class="token operator">>></span> y<span class="token punctuation">;</span>
+    <span class="token operator">++</span> deg<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token operator">++</span> deg<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
 
-  <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= m; ++i) &#123;
-    <span class="hljs-keyword">auto</span> &amp;[x, y] = e[i];
-    <span class="hljs-keyword">if</span> (deg[x][<span class="hljs-number">0</span>] != <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> deg[y][<span class="hljs-number">1</span>] != <span class="hljs-number">1</span>) &#123;
-      v[x].<span class="hljs-built_in">push_back</span>(y);
-      ++ nd[y];
-    &#125;
-  &#125;
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> m<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">auto</span> <span class="token operator">&amp;</span><span class="token punctuation">[</span>x<span class="token punctuation">,</span> y<span class="token punctuation">]</span> <span class="token operator">=</span> e<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>deg<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">1</span> <span class="token operator">and</span> deg<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      v<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token operator">++</span> nd<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
 
-  std::queue&lt;<span class="hljs-type">int</span>&gt; q;
-  <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; ++i) &#123;
-    <span class="hljs-keyword">if</span> (!nd[i]) &#123;
-      q.<span class="hljs-built_in">push</span>(i);
-      dp[i] = <span class="hljs-number">1</span>;
-    &#125;
-  &#125;
+  std<span class="token double-colon punctuation">::</span>queue<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> q<span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>nd<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
 
-  <span class="hljs-type">int</span> ans = <span class="hljs-number">-1</span>;
+  <span class="token keyword">int</span> ans <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
 
-  <span class="hljs-keyword">while</span> (q.<span class="hljs-built_in">size</span>()) &#123;
-    <span class="hljs-type">int</span> t = q.<span class="hljs-built_in">front</span>();
-    q.<span class="hljs-built_in">pop</span>();
-    ans = std::<span class="hljs-built_in">max</span>(ans, dp[t]);
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> &amp;&amp;i : v[t]) &#123;
-      dp[i] = std::<span class="hljs-built_in">max</span>(dp[i], dp[t] + <span class="hljs-number">1</span>);
-      <span class="hljs-keyword">if</span> (-- nd[i] == <span class="hljs-number">0</span>) &#123;
-        q.<span class="hljs-built_in">push</span>(i);
-      &#125;
-    &#125;
-  &#125;
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>q<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">int</span> t <span class="token operator">=</span> q<span class="token punctuation">.</span><span class="token function">front</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    q<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ans <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token function">max</span><span class="token punctuation">(</span>ans<span class="token punctuation">,</span> dp<span class="token punctuation">[</span>t<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token operator">&amp;&amp;</span>i <span class="token operator">:</span> v<span class="token punctuation">[</span>t<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> dp<span class="token punctuation">[</span>t<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">--</span> nd<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
 
-  std::cout &lt;&lt; ans &lt;&lt; <span class="hljs-string">&#x27;\n&#x27;</span>;
+  std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> ans <span class="token operator">&lt;&lt;</span> <span class="token char">'\n'</span><span class="token punctuation">;</span>
 
-  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> ^ <span class="hljs-number">0</span>;
-&#125;</code></pre></div>
+  <span class="token keyword">return</span> <span class="token number">0</span> <span class="token operator">^</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre></div>
 </details>
 <blockquote>
 <p>复杂度： <span class="math inline">\(\mathcal O(n + m)\)</span></p>
@@ -869,6 +870,8 @@ std::vector&lt;<span class="hljs-type">int</span>&gt; v[N];
 
 
 
+  
+    
   
 
 

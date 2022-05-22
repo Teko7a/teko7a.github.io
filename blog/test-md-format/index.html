@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=light>
+<html lang="en" >
 
 
 
@@ -44,7 +44,13 @@
     
     
       
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/atom-one-dark.min.css" />
+      
+        
+          
+        
+        <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism.min.css" />
+      
+      
     
   
 
@@ -174,11 +180,6 @@
           </li>
         
         
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -216,7 +217,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.2k words(or CN characters)
+      2k words(or CN characters)
     </span>
   
 
@@ -225,7 +226,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4 minutes
+      3 minutes
     </span>
   
 
@@ -334,53 +335,53 @@ info
 <p class="note note-light">
 light
 </p>
-<div class="hljs code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;note note-primary&quot;</span>&gt;</span> primary     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;note note-secondary&quot;</span>&gt;</span> secondary <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;note note-success&quot;</span>&gt;</span> success     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;note note-danger&quot;</span>&gt;</span> danger       <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;note note-warning&quot;</span>&gt;</span> warning     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;note note-info&quot;</span>&gt;</span> info           <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;note note-light&quot;</span>&gt;</span> light         <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div>
+<div class="code-wrapper"><pre class="language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>note note-primary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> primary     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>note note-secondary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> secondary <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>note note-success<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> success     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>note note-danger<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> danger       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>note note-warning<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> warning     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>note note-info<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> info           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>note note-light<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> light         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></code></pre></div>
 <h1 id="code">code</h1>
-<div class="hljs code-wrapper"><pre><code class="hljs go"><span class="hljs-keyword">package</span> main
+<div class="code-wrapper"><pre class="language-go" data-language="go"><code class="language-go"><span class="token keyword">package</span> main
 
-<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+<span class="token keyword">import</span> <span class="token string">"fmt"</span>
 
-<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> &#123;
-    ch := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-type">float64</span>)
-    ch &lt;- <span class="hljs-number">1.0e10</span>    <span class="hljs-comment">// magic number</span>
-    x, ok := &lt;- ch
-    <span class="hljs-keyword">defer</span> fmt.Println(<span class="hljs-string">`exitting now\`</span>)
-    <span class="hljs-keyword">go</span> <span class="hljs-built_in">println</span>(<span class="hljs-built_in">len</span>(<span class="hljs-string">&quot;hello world!&quot;</span>))
-    <span class="hljs-keyword">return</span>
-&#125;</code></pre></div>
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    ch <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">chan</span> <span class="token builtin">float64</span><span class="token punctuation">)</span>
+    ch <span class="token operator">&lt;-</span> <span class="token number">1.0e10</span>    <span class="token comment">// magic number</span>
+    x<span class="token punctuation">,</span> ok <span class="token operator">:=</span> <span class="token operator">&lt;-</span> ch
+    <span class="token keyword">defer</span> fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">`exitting now\`</span><span class="token punctuation">)</span>
+    <span class="token keyword">go</span> <span class="token function">println</span><span class="token punctuation">(</span><span class="token function">len</span><span class="token punctuation">(</span><span class="token string">"hello world!"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span>
+<span class="token punctuation">&#125;</span></code></pre></div>
 <details>
 <summary>
 C++ —— The best language!
 </summary>
-<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<div class="code-wrapper"><pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
 
-<span class="hljs-keyword">using</span> i64 = <span class="hljs-type">long</span> <span class="hljs-type">long</span>; <span class="hljs-comment">// &lt;+&gt;</span>
+<span class="token keyword">using</span> i64 <span class="token operator">=</span> <span class="token keyword">long</span> <span class="token keyword">long</span><span class="token punctuation">;</span> <span class="token comment">// &lt;+></span>
 
-<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;
-  <span class="hljs-type">int</span> n;
-  std::cin &gt;&gt; n;
-  <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = n; i &gt; <span class="hljs-number">0</span>; --i) &#123;
-    std::cout &lt;&lt; i &lt;&lt; <span class="hljs-string">&quot; \n&quot;</span>[i == <span class="hljs-number">1</span>];
-  &#125;
-&#125;
+<span class="token keyword">void</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> n<span class="token punctuation">;</span>
+  std<span class="token double-colon punctuation">::</span>cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> n<span class="token punctuation">;</span> i <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token operator">--</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> i <span class="token operator">&lt;&lt;</span> <span class="token string">" \n"</span><span class="token punctuation">[</span>i <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
 
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;
-  std::cin.<span class="hljs-built_in">tie</span>(<span class="hljs-literal">nullptr</span>)-&gt;<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-literal">false</span>);
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  std<span class="token double-colon punctuation">::</span>cin<span class="token punctuation">.</span><span class="token function">tie</span><span class="token punctuation">(</span><span class="token keyword">nullptr</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token function">sync_with_stdio</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="hljs-type">int</span> tt = <span class="hljs-number">1</span>;
-  std::cin &gt;&gt; tt;
-  <span class="hljs-keyword">while</span> (tt --) &#123;
-    <span class="hljs-built_in">solve</span>();
-  &#125;
+  <span class="token keyword">int</span> tt <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  std<span class="token double-colon punctuation">::</span>cin <span class="token operator">>></span> tt<span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>tt <span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">solve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
 
-  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> ^ <span class="hljs-number">0</span>;
-&#125;</code></pre></div>
+  <span class="token keyword">return</span> <span class="token number">0</span> <span class="token operator">^</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre></div>
 </details>
 
             </div>
@@ -538,6 +539,8 @@ C++ —— The best language!
 
 
 
+  
+    
   
 
 
