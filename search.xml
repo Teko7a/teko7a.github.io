@@ -20,13 +20,13 @@
       
         <tags>
             
-            <tag> palindrome </tag>
+            <tag> constructive </tag>
             
             <tag> bitwise </tag>
             
-            <tag> lis </tag>
+            <tag> palindrome </tag>
             
-            <tag> constructive </tag>
+            <tag> lis </tag>
             
             <tag> flow </tag>
             
@@ -148,21 +148,21 @@
             
             <tag> dp </tag>
             
-            <tag> todo </tag>
-            
             <tag> binary search </tag>
             
-            <tag> bitwise </tag>
-            
-            <tag> constructive </tag>
-            
-            <tag> dsu </tag>
+            <tag> todo </tag>
             
             <tag> oeis </tag>
             
             <tag> greedy </tag>
             
+            <tag> dsu </tag>
+            
             <tag> circle </tag>
+            
+            <tag> constructive </tag>
+            
+            <tag> bitwise </tag>
             
             <tag> digit knapsack </tag>
             
