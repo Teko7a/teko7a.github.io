@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>派派的题解站</title>
+  <icon>https://algo.teko7a.top/icon.png</icon>
+  <subtitle>一只努力向上的菜狗</subtitle>
+  <link href="https://algo.teko7a.top/atom.xml" rel="self"/>
+  
+  <link href="https://algo.teko7a.top/"/>
+  <updated>2022-06-16T06:53:01.744Z</updated>
+  <id>https://algo.teko7a.top/</id>
+  
+  <author>
+    <name>Patricky</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>cf702</title>
+    <link href="https://algo.teko7a.top/cf/702/"/>
+    <id>https://algo.teko7a.top/cf/702/</id>
+    <published>2022-05-22T06:38:02.000Z</published>
+    <updated>2022-06-16T06:53:01.744Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;这场比较简单，但通过本场我学到了笛卡尔树。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="cf" scheme="https://algo.teko7a.top/categories/cf/"/>
+    
+    
+    <category term="深搜" scheme="https://algo.teko7a.top/tags/%E6%B7%B1%E6%90%9C/"/>
+    
+    <category term="二分查找" scheme="https://algo.teko7a.top/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
+    
+    <category term="笛卡尔树" scheme="https://algo.teko7a.top/tags/%E7%AC%9B%E5%8D%A1%E5%B0%94%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test-md-format</title>
+    <link href="https://algo.teko7a.top/blog/test-md-format/"/>
+    <id>https://algo.teko7a.top/blog/test-md-format/</id>
+    <published>2022-05-01T14:18:19.000Z</published>
+    <updated>2022-05-24T23:21:50.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;这是一篇用于测试 markdown 高亮与数学公式渲染的文章。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="test" scheme="https://algo.teko7a.top/categories/test/"/>
+    
+    
+    <category term="test" scheme="https://algo.teko7a.top/tags/test/"/>
+    
+  </entry>
+  
+</feed>
