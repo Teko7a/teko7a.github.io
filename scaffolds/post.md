@@ -4,7 +4,6 @@ date: {{ date }}
 categories: cf
 tags:
 permalink: /cf/{{ title }}/
-katex: true
 ---
 
 <!-- more -->
