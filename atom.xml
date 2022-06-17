@@ -6,7 +6,7 @@
   <link href="https://algo.teko7a.top/atom.xml" rel="self"/>
   
   <link href="https://algo.teko7a.top/"/>
-  <updated>2022-06-16T06:53:01.744Z</updated>
+  <updated>2022-06-17T15:28:42.322Z</updated>
   <id>https://algo.teko7a.top/</id>
   
   <author>
@@ -17,11 +17,50 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2SAT</title>
+    <link href="https://algo.teko7a.top/algo/graph/2sat/"/>
+    <id>https://algo.teko7a.top/algo/graph/2sat/</id>
+    <published>2022-06-16T07:53:44.000Z</published>
+    <updated>2022-06-17T15:28:42.322Z</updated>
+    
+    
+    <summary type="html">&lt;div class=&quot;info&quot;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.05ex;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;4.588ex&quot; height=&quot;1.67ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -716 2028 738&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;53&quot; d=&quot;M55 507Q55 590 112 647T243 704H257Q342 704 405 641L426 672Q431 679 436 687T446 700L449 704Q450 704 453 704T459 705H463Q466 705 472 699V462L466 456H448Q437 456 435 459T430 479Q413 605 329 646Q292 662 254 662Q201 662 168 626T135 542Q135 508 152 480T200 435Q210 431 286 412T370 389Q427 367 463 314T500 191Q500 110 448 45T301 -21Q245 -21 201 -4T140 27L122 41Q118 36 107 21T87 -7T78 -21Q76 -22 68 -22H64Q61 -22 55 -16V101Q55 220 56 222Q58 227 76 227H89Q95 221 95 214Q95 182 105 151T139 90T205 42T305 24Q352 24 386 62T420 155Q420 198 398 233T340 281Q284 295 266 300Q261 301 239 306T206 314T174 325T141 343T112 367T85 402Q55 451 55 507Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(556,0)&quot;&gt;&lt;path data-c=&quot;41&quot; d=&quot;M255 0Q240 3 140 3Q48 3 39 0H32V46H47Q119 49 139 88Q140 91 192 245T295 553T348 708Q351 716 366 716H376Q396 715 400 709Q402 707 508 390L617 67Q624 54 636 51T687 46H717V0H708Q699 3 581 3Q458 3 437 0H427V46H440Q510 46 510 64Q510 66 486 138L462 209H229L209 150Q189 91 189 85Q189 72 209 59T259 46H264V0H255ZM447 255L345 557L244 256Q244 255 345 255H447Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(1306,0)&quot;&gt;&lt;path data-c=&quot;54&quot; d=&quot;M36 443Q37 448 46 558T55 671V677H666V671Q667 666 676 556T685 443V437H645V443Q645 445 642 478T631 544T610 593Q593 614 555 625Q534 630 478 630H451H443Q417 630 414 618Q413 616 413 339V63Q420 53 439 50T528 46H558V0H545L361 3Q186 1 177 0H164V46H194Q264 46 283 49T309 63V339V550Q309 620 304 625T271 630H244H224Q154 630 119 601Q101 585 93 554T81 486T76 443V437H36V443Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt;
+问题指的是，给定多个不定长的布尔量之合取（称为
+&lt;strong&gt;“子句”&lt;/strong&gt;），求出满足子句之析取的一组可满足的解或报告无解。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;p&gt;这是第一个被提出的 &lt;strong&gt;NPC&lt;/strong&gt;
+问题，意味着若高效解决此问题就能完成对 &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.186ex;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;7.795ex&quot; height=&quot;1.731ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -683 3445.6 765&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;50&quot; d=&quot;M130 622Q123 629 119 631T103 634T60 637H27V683H214Q237 683 276 683T331 684Q419 684 471 671T567 616Q624 563 624 489Q624 421 573 372T451 307Q429 302 328 301H234V181Q234 62 237 58Q245 47 304 46H337V0H326Q305 3 182 3Q47 3 38 0H27V46H60Q102 47 111 49T130 61V622ZM507 488Q507 514 506 528T500 564T483 597T450 620T397 635Q385 637 307 637H286Q237 637 234 628Q231 624 231 483V342H302H339Q390 342 423 349T481 382Q507 411 507 488Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(958.8,0)&quot;&gt;&lt;path data-c=&quot;3D&quot; d=&quot;M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(2014.6,0)&quot;&gt;&lt;path data-c=&quot;4E&quot; d=&quot;M42 46Q74 48 94 56T118 69T128 86V634H124Q114 637 52 637H25V683H232L235 680Q237 679 322 554T493 303L578 178V598Q572 608 568 613T544 627T492 637H475V683H483Q498 680 600 680Q706 680 715 683H724V637H707Q634 633 622 598L621 302V6L614 0H600Q585 0 582 3T481 150T282 443T171 605V345L172 86Q183 50 257 46H274V0H265Q250 3 150 3Q48 3 33 0H25V46H42Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(2764.6,0)&quot;&gt;&lt;path data-c=&quot;50&quot; d=&quot;M130 622Q123 629 119 631T103 634T60 637H27V683H214Q237 683 276 683T331 684Q419 684 471 671T567 616Q624 563 624 489Q624 421 573 372T451 307Q429 302 328 301H234V181Q234 62 237 58Q245 47 304 46H337V0H326Q305 3 182 3Q47 3 38 0H27V46H60Q102 47 111 49T130 61V622ZM507 488Q507 514 506 528T500 564T483 597T450 620T397 635Q385 637 307 637H286Q237 637 234 628Q231 624 231 483V342H302H339Q390 342 423 349T481 382Q507 411 507 488Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt; 的证明。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.05ex;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;5.719ex&quot; height=&quot;1.67ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -716 2528 738&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mn&quot;&gt;&lt;path data-c=&quot;32&quot; d=&quot;M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;path data-c=&quot;53&quot; d=&quot;M55 507Q55 590 112 647T243 704H257Q342 704 405 641L426 672Q431 679 436 687T446 700L449 704Q450 704 453 704T459 705H463Q466 705 472 699V462L466 456H448Q437 456 435 459T430 479Q413 605 329 646Q292 662 254 662Q201 662 168 626T135 542Q135 508 152 480T200 435Q210 431 286 412T370 389Q427 367 463 314T500 191Q500 110 448 45T301 -21Q245 -21 201 -4T140 27L122 41Q118 36 107 21T87 -7T78 -21Q76 -22 68 -22H64Q61 -22 55 -16V101Q55 220 56 222Q58 227 76 227H89Q95 221 95 214Q95 182 105 151T139 90T205 42T305 24Q352 24 386 62T420 155Q420 198 398 233T340 281Q284 295 266 300Q261 301 239 306T206 314T174 325T141 343T112 367T85 402Q55 451 55 507Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(1056,0)&quot;&gt;&lt;path data-c=&quot;41&quot; d=&quot;M255 0Q240 3 140 3Q48 3 39 0H32V46H47Q119 49 139 88Q140 91 192 245T295 553T348 708Q351 716 366 716H376Q396 715 400 709Q402 707 508 390L617 67Q624 54 636 51T687 46H717V0H708Q699 3 581 3Q458 3 437 0H427V46H440Q510 46 510 64Q510 66 486 138L462 209H229L209 150Q189 91 189 85Q189 72 209 59T259 46H264V0H255ZM447 255L345 557L244 256Q244 255 345 255H447Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(1806,0)&quot;&gt;&lt;path data-c=&quot;54&quot; d=&quot;M36 443Q37 448 46 558T55 671V677H666V671Q667 666 676 556T685 443V437H645V443Q645 445 642 478T631 544T610 593Q593 614 555 625Q534 630 478 630H451H443Q417 630 414 618Q413 616 413 339V63Q420 53 439 50T528 46H558V0H545L361 3Q186 1 177 0H164V46H194Q264 46 283 49T309 63V339V550Q309 620 304 625T271 630H244H224Q154 630 119 601Q101 585 93 554T81 486T76 443V437H36V443Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt; 问题中每一个子句长都为
+&lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: 0;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1.131ex&quot; height=&quot;1.507ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -666 500 666&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mn&quot;&gt;&lt;path data-c=&quot;32&quot; d=&quot;M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="algo" scheme="https://algo.teko7a.top/categories/algo/"/>
+    
+    
+    <category term="图论" scheme="https://algo.teko7a.top/tags/%E5%9B%BE%E8%AE%BA/"/>
+    
+    <category term="2SAT" scheme="https://algo.teko7a.top/tags/2SAT/"/>
+    
+    <category term="缩点" scheme="https://algo.teko7a.top/tags/%E7%BC%A9%E7%82%B9/"/>
+    
+    <category term="Tarjan" scheme="https://algo.teko7a.top/tags/Tarjan/"/>
+    
+    <category term="拓扑序" scheme="https://algo.teko7a.top/tags/%E6%8B%93%E6%89%91%E5%BA%8F/"/>
+    
+    <category term="建图" scheme="https://algo.teko7a.top/tags/%E5%BB%BA%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>cf702</title>
     <link href="https://algo.teko7a.top/cf/702/"/>
     <id>https://algo.teko7a.top/cf/702/</id>
     <published>2022-05-22T06:38:02.000Z</published>
-    <updated>2022-06-16T06:53:01.744Z</updated>
+    <updated>2022-06-16T21:09:11.301Z</updated>
     
     
     <summary type="html">&lt;p&gt;这场比较简单，但通过本场我学到了笛卡尔树。&lt;/p&gt;</summary>
